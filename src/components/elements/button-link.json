@@ -1,0 +1,19 @@
+{
+  "collectionName": "components_elements_button_links",
+  "info": {
+    "displayName": "Button Link"
+  },
+  "options": {},
+  "attributes": {
+    "label": {
+      "type": "string"
+    },
+    "type": {
+      "type": "enumeration",
+      "enum": [
+        "BTN-PRIMARY",
+        "BTN-SECONDARY"
+      ]
+    }
+  }
+}

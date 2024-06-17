@@ -1,0 +1,17 @@
+{
+  "collectionName": "components_row_rows",
+  "info": {
+    "displayName": "row"
+  },
+  "options": {},
+  "attributes": {
+    "Headersliders": {
+      "type": "string"
+    },
+    "sliders": {
+      "type": "component",
+      "repeatable": true,
+      "component": "elements.slider"
+    }
+  }
+}

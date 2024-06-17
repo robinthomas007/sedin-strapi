@@ -1,0 +1,29 @@
+{
+  "collectionName": "components_heading_sliders",
+  "info": {
+    "displayName": "Slider",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "text"
+    },
+    "description": {
+      "type": "text"
+    },
+    "actionButton": {
+      "type": "component",
+      "repeatable": false,
+      "component": "elements.button-link"
+    },
+    "sliderimage": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images"
+      ]
+    }
+  }
+}
