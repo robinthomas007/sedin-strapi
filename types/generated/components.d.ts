@@ -115,17 +115,6 @@ export interface RowListWrapper extends Schema.Component {
   };
 }
 
-export interface RowRow extends Schema.Component {
-  collectionName: 'components_row_rows';
-  info: {
-    displayName: 'row';
-  };
-  attributes: {
-    Headersliders: Attribute.String;
-    sliders: Attribute.Component<'elements.slider', true>;
-  };
-}
-
 declare module '@strapi/types' {
   export module Shared {
     export interface Components {
@@ -138,7 +127,6 @@ declare module '@strapi/types' {
       'elements.tab': ElementsTab;
       'row.card-row': RowCardRow;
       'row.list-wrapper': RowListWrapper;
-      'row.row': RowRow;
     }
   }
 }
