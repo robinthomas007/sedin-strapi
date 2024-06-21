@@ -1,0 +1,15 @@
+{
+  "collectionName": "components_elements_customer_stories",
+  "info": {
+    "displayName": "customerStories"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "url": {
+      "type": "string"
+    }
+  }
+}

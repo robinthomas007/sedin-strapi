@@ -1,0 +1,20 @@
+{
+  "collectionName": "components_elements_nav_tabs",
+  "info": {
+    "displayName": "NavTab",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "tab_content": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::tab-content.tab-content",
+      "targetAttribute": "name",
+      "mainField": "title"
+    }
+  }
+}

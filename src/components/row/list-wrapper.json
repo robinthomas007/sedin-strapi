@@ -1,0 +1,17 @@
+{
+  "collectionName": "components_row_list_wrappers",
+  "info": {
+    "displayName": "listWrapper"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "listItem": {
+      "type": "component",
+      "repeatable": true,
+      "component": "elements.list"
+    }
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "collectionName": "components_elements_tabs",
+  "info": {
+    "displayName": "NavBar",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "description": {
+      "type": "text"
+    },
+    "nav_content": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::nav-content.nav-content"
+    }
+  }
+}

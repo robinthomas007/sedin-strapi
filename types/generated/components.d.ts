@@ -24,6 +24,44 @@ export interface ElementsCard extends Schema.Component {
   };
 }
 
+export interface ElementsCustomerStories extends Schema.Component {
+  collectionName: 'components_elements_customer_stories';
+  info: {
+    displayName: 'customerStories';
+  };
+  attributes: {
+    title: Attribute.String;
+    url: Attribute.String;
+  };
+}
+
+export interface ElementsList extends Schema.Component {
+  collectionName: 'components_elements_lists';
+  info: {
+    displayName: 'List';
+  };
+  attributes: {
+    title: Attribute.String;
+    image: Attribute.Media;
+  };
+}
+
+export interface ElementsNavTab extends Schema.Component {
+  collectionName: 'components_elements_nav_tabs';
+  info: {
+    displayName: 'NavTab';
+    description: '';
+  };
+  attributes: {
+    name: Attribute.String;
+    tab_content: Attribute.Relation<
+      'elements.nav-tab',
+      'oneToOne',
+      'api::tab-content.tab-content'
+    >;
+  };
+}
+
 export interface ElementsSlider extends Schema.Component {
   collectionName: 'components_heading_sliders';
   info: {
@@ -38,6 +76,23 @@ export interface ElementsSlider extends Schema.Component {
   };
 }
 
+export interface ElementsTab extends Schema.Component {
+  collectionName: 'components_elements_tabs';
+  info: {
+    displayName: 'NavBar';
+    description: '';
+  };
+  attributes: {
+    title: Attribute.String;
+    description: Attribute.Text;
+    nav_content: Attribute.Relation<
+      'elements.tab',
+      'oneToOne',
+      'api::nav-content.nav-content'
+    >;
+  };
+}
+
 export interface RowCardRow extends Schema.Component {
   collectionName: 'components_row_card_rows';
   info: {
@@ -46,6 +101,17 @@ export interface RowCardRow extends Schema.Component {
   attributes: {
     title: Attribute.String;
     cards: Attribute.Component<'elements.card', true>;
+  };
+}
+
+export interface RowListWrapper extends Schema.Component {
+  collectionName: 'components_row_list_wrappers';
+  info: {
+    displayName: 'listWrapper';
+  };
+  attributes: {
+    title: Attribute.String;
+    listItem: Attribute.Component<'elements.list', true>;
   };
 }
 
@@ -65,8 +131,13 @@ declare module '@strapi/types' {
     export interface Components {
       'elements.button-link': ElementsButtonLink;
       'elements.card': ElementsCard;
+      'elements.customer-stories': ElementsCustomerStories;
+      'elements.list': ElementsList;
+      'elements.nav-tab': ElementsNavTab;
       'elements.slider': ElementsSlider;
+      'elements.tab': ElementsTab;
       'row.card-row': RowCardRow;
+      'row.list-wrapper': RowListWrapper;
       'row.row': RowRow;
     }
   }

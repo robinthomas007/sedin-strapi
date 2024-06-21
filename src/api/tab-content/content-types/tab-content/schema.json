@@ -1,0 +1,29 @@
+{
+  "kind": "collectionType",
+  "collectionName": "tab_contents",
+  "info": {
+    "singularName": "tab-content",
+    "pluralName": "tab-contents",
+    "displayName": "TabContent",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "TabContent": {
+      "type": "component",
+      "repeatable": false,
+      "component": "elements.card"
+    },
+    "heading": {
+      "type": "string"
+    },
+    "justRelease": {
+      "type": "component",
+      "repeatable": false,
+      "component": "row.list-wrapper"
+    }
+  }
+}
