@@ -1,16 +1,15 @@
 {
-  "collectionName": "components_elements_customer_stories",
+  "collectionName": "components_elements_statitics",
   "info": {
-    "displayName": "customerStories",
-    "description": ""
+    "displayName": "statitics"
   },
   "options": {},
   "attributes": {
-    "title": {
+    "label": {
       "type": "string",
       "required": true
     },
-    "url": {
+    "value": {
       "type": "string",
       "required": true
     }

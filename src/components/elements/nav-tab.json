@@ -7,14 +7,13 @@
   "options": {},
   "attributes": {
     "name": {
-      "type": "string"
+      "type": "string",
+      "required": true
     },
     "tab_content": {
       "type": "relation",
       "relation": "oneToOne",
-      "target": "api::tab-content.tab-content",
-      "targetAttribute": "name",
-      "mainField": "title"
+      "target": "api::tab-content.tab-content"
     }
   }
 }

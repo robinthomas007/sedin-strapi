@@ -910,8 +910,8 @@ export interface ApiNavContentNavContent extends Schema.CollectionType {
     draftAndPublish: true;
   };
   attributes: {
-    TabItem: Attribute.Component<'elements.nav-tab', true>;
-    NavName: Attribute.String;
+    TabItem: Attribute.Component<'elements.nav-tab', true> & Attribute.Required;
+    NavName: Attribute.String & Attribute.Required;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
@@ -942,9 +942,10 @@ export interface ApiTabContentTabContent extends Schema.CollectionType {
     draftAndPublish: true;
   };
   attributes: {
-    TabContent: Attribute.Component<'elements.card'>;
-    heading: Attribute.String;
-    justRelease: Attribute.Component<'row.list-wrapper'>;
+    TabContent: Attribute.Component<'elements.card'> & Attribute.Required;
+    heading: Attribute.String & Attribute.Required;
+    justRelease: Attribute.Component<'row.list-wrapper'> & Attribute.Required;
+    Links: Attribute.Component<'elements.list', true>;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
@@ -956,6 +957,50 @@ export interface ApiTabContentTabContent extends Schema.CollectionType {
       Attribute.Private;
     updatedBy: Attribute.Relation<
       'api::tab-content.tab-content',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
+export interface ApiTechnologyConsultingTechnologyConsulting
+  extends Schema.SingleType {
+  collectionName: 'technology_consultings';
+  info: {
+    singularName: 'technology-consulting';
+    pluralName: 'technology-consultings';
+    displayName: 'Technology Consulting';
+    description: '';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    breadcrumbs: Attribute.Component<'elements.list', true>;
+    scrollerList: Attribute.Component<'elements.list', true>;
+    headerSection: Attribute.Component<'elements.card'>;
+    title: Attribute.String;
+    description: Attribute.Text;
+    sectionTwo: Attribute.Component<'row.card-row'>;
+    whatWeBetter: Attribute.Component<'row.card-row'>;
+    knoUsBetter: Attribute.Component<'row.card-row'>;
+    statitics: Attribute.Component<'elements.statitics', true>;
+    howWeBetter: Attribute.Component<'row.card-row'>;
+    customerStories: Attribute.Component<'row.card-row'>;
+    reachOut: Attribute.Component<'elements.card'>;
+    faqs: Attribute.Component<'row.faq-row'>;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::technology-consulting.technology-consulting',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::technology-consulting.technology-consulting',
       'oneToOne',
       'admin::user'
     > &
@@ -986,6 +1031,7 @@ declare module '@strapi/types' {
       'api::homepage.homepage': ApiHomepageHomepage;
       'api::nav-content.nav-content': ApiNavContentNavContent;
       'api::tab-content.tab-content': ApiTabContentTabContent;
+      'api::technology-consulting.technology-consulting': ApiTechnologyConsultingTechnologyConsulting;
     }
   }
 }

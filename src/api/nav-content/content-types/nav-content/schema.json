@@ -15,10 +15,12 @@
     "TabItem": {
       "type": "component",
       "repeatable": true,
-      "component": "elements.nav-tab"
+      "component": "elements.nav-tab",
+      "required": true
     },
     "NavName": {
-      "type": "string"
+      "type": "string",
+      "required": true
     }
   }
 }

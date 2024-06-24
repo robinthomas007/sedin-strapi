@@ -1,0 +1,77 @@
+{
+  "kind": "singleType",
+  "collectionName": "technology_consultings",
+  "info": {
+    "singularName": "technology-consulting",
+    "pluralName": "technology-consultings",
+    "displayName": "Technology Consulting",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "breadcrumbs": {
+      "type": "component",
+      "repeatable": true,
+      "component": "elements.list"
+    },
+    "scrollerList": {
+      "type": "component",
+      "repeatable": true,
+      "component": "elements.list"
+    },
+    "headerSection": {
+      "type": "component",
+      "repeatable": false,
+      "component": "elements.card"
+    },
+    "title": {
+      "type": "string"
+    },
+    "description": {
+      "type": "text"
+    },
+    "sectionTwo": {
+      "type": "component",
+      "repeatable": false,
+      "component": "row.card-row"
+    },
+    "whatWeBetter": {
+      "type": "component",
+      "repeatable": false,
+      "component": "row.card-row"
+    },
+    "knoUsBetter": {
+      "type": "component",
+      "repeatable": false,
+      "component": "row.card-row"
+    },
+    "statitics": {
+      "type": "component",
+      "repeatable": true,
+      "component": "elements.statitics"
+    },
+    "howWeBetter": {
+      "type": "component",
+      "repeatable": false,
+      "component": "row.card-row"
+    },
+    "customerStories": {
+      "type": "component",
+      "repeatable": false,
+      "component": "row.card-row"
+    },
+    "reachOut": {
+      "type": "component",
+      "repeatable": false,
+      "component": "elements.card"
+    },
+    "faqs": {
+      "type": "component",
+      "repeatable": false,
+      "component": "row.faq-row"
+    }
+  }
+}

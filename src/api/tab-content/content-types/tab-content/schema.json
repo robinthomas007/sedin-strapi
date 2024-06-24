@@ -15,15 +15,23 @@
     "TabContent": {
       "type": "component",
       "repeatable": false,
-      "component": "elements.card"
+      "component": "elements.card",
+      "required": true
     },
     "heading": {
-      "type": "string"
+      "type": "string",
+      "required": true
     },
     "justRelease": {
       "type": "component",
       "repeatable": false,
-      "component": "row.list-wrapper"
+      "component": "row.list-wrapper",
+      "required": true
+    },
+    "Links": {
+      "type": "component",
+      "repeatable": true,
+      "component": "elements.list"
     }
   }
 }
