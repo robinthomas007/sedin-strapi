@@ -1,0 +1,17 @@
+{
+  "collectionName": "components_elements_statitics",
+  "info": {
+    "displayName": "statitics"
+  },
+  "options": {},
+  "attributes": {
+    "label": {
+      "type": "string",
+      "required": true
+    },
+    "value": {
+      "type": "string",
+      "required": true
+    }
+  }
+}

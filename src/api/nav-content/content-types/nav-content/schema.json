@@ -1,0 +1,26 @@
+{
+  "kind": "collectionType",
+  "collectionName": "nav_contents",
+  "info": {
+    "singularName": "nav-content",
+    "pluralName": "nav-contents",
+    "displayName": "NavContent",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "TabItem": {
+      "type": "component",
+      "repeatable": true,
+      "component": "elements.nav-tab",
+      "required": true
+    },
+    "NavName": {
+      "type": "string",
+      "required": true
+    }
+  }
+}

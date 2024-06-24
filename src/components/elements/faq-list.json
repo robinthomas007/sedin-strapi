@@ -1,0 +1,17 @@
+{
+  "collectionName": "components_elements_faq_lists",
+  "info": {
+    "displayName": "faqList"
+  },
+  "options": {},
+  "attributes": {
+    "question": {
+      "type": "text",
+      "required": true
+    },
+    "answer": {
+      "type": "text",
+      "required": true
+    }
+  }
+}

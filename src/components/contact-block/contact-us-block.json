@@ -1,0 +1,20 @@
+{
+  "collectionName": "components_contact_block_contact_us_blocks",
+  "info": {
+    "displayName": "contactUsBlock"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "description": {
+      "type": "text"
+    },
+    "cards": {
+      "type": "component",
+      "repeatable": true,
+      "component": "elements.card"
+    }
+  }
+}
