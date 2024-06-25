@@ -25,6 +25,9 @@ variable "AlbListenerArn80" {}
 variable "StrapiAlbHostHeader" {}
 variable "AlbListenerArn443" {}
 variable "StrapiLisenterPriority" {}
-variable "FileBackupS3Path" {}
 variable "NodeEnv" {}
 variable "AppEnv" {}
+variable "AwsAccessKey" {}
+variable "AwsAccessSecretKey" {}
+variable "AwsRegion" {}
+variable "AwsBucket" {}

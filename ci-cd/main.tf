@@ -28,6 +28,9 @@ module "strapi" {
     DatabasePassword            = var.DatabasePassword
     DatabaseSslEnable           = var.DatabaseSslEnable
     NodeEnv                     = var.NodeEnv
-    FileBackupS3Path            = var.FileBackupS3Path
     AppEnv                      = var.AppEnv
+    AwsAccessKey                = var.AwsAccessKey
+    AwsAccessSecretKey          = var.AwsAccessSecretKey
+    AwsRegion                   = var.AwsRegion
+    AwsBucket                   = var.AwsBucket
 }

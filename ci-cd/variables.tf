@@ -27,7 +27,6 @@ variable "AdminJwtSecret" {}
 variable "AppKeys" {}
 variable "TransferTokenSalt" {}
 variable "JwtSecret" {}
-variable "FileBackupS3Path" {}
 variable "NodeEnv" {}
 variable "DatabasePort" {}
 variable "DatabaseHost" {}
@@ -36,3 +35,7 @@ variable "DatabaseUserName" {}
 variable "DatabasePassword" {}
 variable "DatabaseSslEnable" {}
 variable "AppEnv" {}
+variable "AwsAccessKey" {}
+variable "AwsAccessSecretKey" {}
+variable "AwsRegion" {}
+variable "AwsBucket" {}

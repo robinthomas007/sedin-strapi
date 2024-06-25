@@ -77,9 +77,22 @@ resource "aws_ecs_task_definition" "strapi_task_definition" {
                 value = var.NodeEnv
             },
             {
-                name = "FILE_BACKUP_S3_PATH"
-                value = var.FileBackupS3Path
+                name = "AWS_ACCESS_KEY_ID"
+                value = var.AwsAccessKey
+            },
+            {
+                name = "AWS_ACCESS_SECRET"
+                value = var.AwsAccessSecretKey
+            }, 
+            {
+                name = "AWS_REGION"
+                value = var.AwsRegion
+            },
+            {
+                name = "AWS_BUCKET"
+                value = var.AwsBucket
             }
+
         ]
     }])
 
