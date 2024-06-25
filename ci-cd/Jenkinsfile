@@ -23,7 +23,7 @@ pipeline {
         stage('Build') {
             steps {
                 script {
-                    echo "<=========== Logging to ECR =========>"
+                    echo "<=========== Logging to ECR ===========>"
                     def currentWorkspace = sh(script: 'pwd', returnStdout: true).trim()
                     dir("${currentWorkspace}") {
                         sh 'aws ecr get-login-password --profile $AWS_PROFILE --region $AWS_REGION | docker login --username AWS --password-stdin ${ECR_REPO_URL}'
