@@ -1,0 +1,18 @@
+{
+  "collectionName": "components_row_info_card_rows",
+  "info": {
+    "displayName": "InfoCardRow"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "infoCard": {
+      "type": "component",
+      "repeatable": true,
+      "component": "elements.info-card"
+    }
+  }
+}

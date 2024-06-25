@@ -27,23 +27,12 @@
       "repeatable": false,
       "component": "elements.card"
     },
-    "title": {
-      "type": "string"
-    },
-    "description": {
-      "type": "text"
-    },
-    "sectionTwo": {
-      "type": "component",
-      "repeatable": false,
-      "component": "row.card-row"
-    },
     "whatWeBetter": {
       "type": "component",
       "repeatable": false,
       "component": "row.card-row"
     },
-    "knoUsBetter": {
+    "knowUsBetter": {
       "type": "component",
       "repeatable": false,
       "component": "row.card-row"
@@ -72,6 +61,11 @@
       "type": "component",
       "repeatable": false,
       "component": "row.faq-row"
+    },
+    "technology_consulting_intro": {
+      "type": "component",
+      "repeatable": false,
+      "component": "row.info-card-row"
     }
   }
 }

@@ -981,16 +981,14 @@ export interface ApiTechnologyConsultingTechnologyConsulting
     breadcrumbs: Attribute.Component<'elements.list', true>;
     scrollerList: Attribute.Component<'elements.list', true>;
     headerSection: Attribute.Component<'elements.card'>;
-    title: Attribute.String;
-    description: Attribute.Text;
-    sectionTwo: Attribute.Component<'row.card-row'>;
     whatWeBetter: Attribute.Component<'row.card-row'>;
-    knoUsBetter: Attribute.Component<'row.card-row'>;
+    knowUsBetter: Attribute.Component<'row.card-row'>;
     statitics: Attribute.Component<'elements.statitics', true>;
     howWeBetter: Attribute.Component<'row.card-row'>;
     customerStories: Attribute.Component<'row.card-row'>;
     reachOut: Attribute.Component<'elements.card'>;
     faqs: Attribute.Component<'row.faq-row'>;
+    technology_consulting_intro: Attribute.Component<'row.info-card-row'>;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;

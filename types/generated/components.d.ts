@@ -21,9 +21,9 @@ export interface ElementsButtonLink extends Schema.Component {
     description: '';
   };
   attributes: {
-    label: Attribute.String & Attribute.Required;
+    label: Attribute.String;
     type: Attribute.Enumeration<['BTN-PRIMARY', 'BTN-SECONDARY']>;
-    icon: Attribute.Media & Attribute.Required;
+    icon: Attribute.Media;
     link: Attribute.Text;
   };
 }
@@ -38,7 +38,7 @@ export interface ElementsCard extends Schema.Component {
     title: Attribute.Text & Attribute.Required;
     description: Attribute.Text;
     cardimg: Attribute.Media;
-    cardbtn: Attribute.Component<'elements.button-link'> & Attribute.Required;
+    cardbtn: Attribute.Component<'elements.button-link'>;
     description2: Attribute.Text;
   };
 }
@@ -63,6 +63,17 @@ export interface ElementsFaqList extends Schema.Component {
   attributes: {
     question: Attribute.Text & Attribute.Required;
     answer: Attribute.Text & Attribute.Required;
+  };
+}
+
+export interface ElementsInfoCard extends Schema.Component {
+  collectionName: 'components_elements_info_cards';
+  info: {
+    displayName: 'infoCard';
+  };
+  attributes: {
+    title: Attribute.String & Attribute.Required;
+    description: Attribute.Text;
   };
 }
 
@@ -154,9 +165,22 @@ export interface RowFaqRow extends Schema.Component {
   collectionName: 'components_row_faq_rows';
   info: {
     displayName: 'faqRow';
+    description: '';
   };
   attributes: {
     faq: Attribute.Component<'elements.faq-list', true>;
+    title: Attribute.String & Attribute.Required;
+  };
+}
+
+export interface RowInfoCardRow extends Schema.Component {
+  collectionName: 'components_row_info_card_rows';
+  info: {
+    displayName: 'InfoCardRow';
+  };
+  attributes: {
+    title: Attribute.String & Attribute.Required;
+    infoCard: Attribute.Component<'elements.info-card', true>;
   };
 }
 
@@ -180,6 +204,7 @@ declare module '@strapi/types' {
       'elements.card': ElementsCard;
       'elements.customer-stories': ElementsCustomerStories;
       'elements.faq-list': ElementsFaqList;
+      'elements.info-card': ElementsInfoCard;
       'elements.list': ElementsList;
       'elements.nav-tab': ElementsNavTab;
       'elements.slider': ElementsSlider;
@@ -187,6 +212,7 @@ declare module '@strapi/types' {
       'elements.tab': ElementsTab;
       'row.card-row': RowCardRow;
       'row.faq-row': RowFaqRow;
+      'row.info-card-row': RowInfoCardRow;
       'row.list-wrapper': RowListWrapper;
     }
   }

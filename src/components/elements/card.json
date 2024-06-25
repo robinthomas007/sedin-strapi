@@ -25,7 +25,7 @@
       "type": "component",
       "repeatable": false,
       "component": "elements.button-link",
-      "required": true
+      "required": false
     },
     "description2": {
       "type": "text"

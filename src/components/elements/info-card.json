@@ -1,0 +1,16 @@
+{
+  "collectionName": "components_elements_info_cards",
+  "info": {
+    "displayName": "infoCard"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "description": {
+      "type": "text"
+    }
+  }
+}
