@@ -13,37 +13,44 @@
   "pluginOptions": {},
   "attributes": {
     "title": {
-      "type": "string"
+      "type": "string",
+      "required": true
     },
     "footerLogo": {
       "type": "media",
       "multiple": false,
-      "required": false,
+      "required": true,
       "allowedTypes": [
         "images"
       ]
     },
     "terms": {
-      "type": "string"
+      "type": "string",
+      "required": true
     },
     "rights": {
-      "type": "string"
+      "type": "string",
+      "required": true
     },
     "privacy": {
-      "type": "string"
+      "type": "string",
+      "required": true
     },
     "csr": {
-      "type": "string"
+      "type": "string",
+      "required": true
     },
     "footerMenu": {
       "type": "component",
       "repeatable": false,
-      "component": "row.list-wrapper"
+      "component": "row.list-wrapper",
+      "required": true
     },
     "footerSocialMedia": {
       "type": "component",
       "repeatable": false,
-      "component": "row.list-wrapper"
+      "component": "row.list-wrapper",
+      "required": true
     }
   }
 }

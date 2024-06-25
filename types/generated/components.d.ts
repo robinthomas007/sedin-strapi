@@ -4,11 +4,13 @@ export interface ContactBlockContactUsBlock extends Schema.Component {
   collectionName: 'components_contact_block_contact_us_blocks';
   info: {
     displayName: 'contactUsBlock';
+    description: '';
   };
   attributes: {
-    title: Attribute.String;
-    description: Attribute.Text;
-    cards: Attribute.Component<'elements.card', true>;
+    title: Attribute.String & Attribute.Required;
+    description: Attribute.Text & Attribute.Required;
+    image: Attribute.Media & Attribute.Required;
+    button: Attribute.Component<'elements.button-link'>;
   };
 }
 

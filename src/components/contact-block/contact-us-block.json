@@ -1,20 +1,31 @@
 {
   "collectionName": "components_contact_block_contact_us_blocks",
   "info": {
-    "displayName": "contactUsBlock"
+    "displayName": "contactUsBlock",
+    "description": ""
   },
   "options": {},
   "attributes": {
     "title": {
-      "type": "string"
+      "type": "string",
+      "required": true
     },
     "description": {
-      "type": "text"
+      "type": "text",
+      "required": true
     },
-    "cards": {
+    "image": {
+      "allowedTypes": [
+        "images"
+      ],
+      "type": "media",
+      "multiple": false,
+      "required": true
+    },
+    "button": {
       "type": "component",
-      "repeatable": true,
-      "component": "elements.card"
+      "repeatable": false,
+      "component": "elements.button-link"
     }
   }
 }

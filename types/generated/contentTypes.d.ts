@@ -800,14 +800,15 @@ export interface ApiFooterFooter extends Schema.SingleType {
     draftAndPublish: true;
   };
   attributes: {
-    title: Attribute.String;
-    footerLogo: Attribute.Media;
-    terms: Attribute.String;
-    rights: Attribute.String;
-    privacy: Attribute.String;
-    csr: Attribute.String;
-    footerMenu: Attribute.Component<'row.list-wrapper'>;
-    footerSocialMedia: Attribute.Component<'row.list-wrapper'>;
+    title: Attribute.String & Attribute.Required;
+    footerLogo: Attribute.Media & Attribute.Required;
+    terms: Attribute.String & Attribute.Required;
+    rights: Attribute.String & Attribute.Required;
+    privacy: Attribute.String & Attribute.Required;
+    csr: Attribute.String & Attribute.Required;
+    footerMenu: Attribute.Component<'row.list-wrapper'> & Attribute.Required;
+    footerSocialMedia: Attribute.Component<'row.list-wrapper'> &
+      Attribute.Required;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
