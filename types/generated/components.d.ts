@@ -17,7 +17,7 @@ export interface ContactBlockContactUsBlock extends Schema.Component {
 export interface ElementsButtonLink extends Schema.Component {
   collectionName: 'components_elements_button_links';
   info: {
-    displayName: 'Button Link';
+    displayName: 'Button';
     description: '';
   };
   attributes: {
