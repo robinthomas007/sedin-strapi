@@ -122,7 +122,7 @@ resource "aws_ecs_service" "strapi_ecs_service" {
 }
 
 resource "aws_lb_target_group" "StrapiTargetGroup" {
-    name = format("%s-strapi-engineering", var.AppEnvPrefix)
+    name = format("%s-strapi-sedin", var.AppEnvPrefix)
 
     target_type = "instance"
     port = 80
