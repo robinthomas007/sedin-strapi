@@ -1,0 +1,38 @@
+variable "profile" {}
+variable "region" {}
+variable "ProjectName" {}
+variable "AppEnvPrefix" {}
+variable "StrapiImage" {}
+variable "StrapiContainerCpu" {
+    type = number
+    default = "0"
+}
+variable "StrapiContainerMemory" {
+    type = number
+    default = "0"
+}
+variable "StrapiAlbHostHeader" {}
+variable "ClusterName" {}
+variable "StrapiRollingMaxPercent" {}
+variable "StrapiMinHealthyPercent" {}
+variable "VpcId" {}
+variable "StrapiHealthCheckPath" {}
+variable "AlbListenerArn80" {}
+variable "AlbListenerArn443" {}
+variable "StrapiLisenterPriority" {}
+variable "DatabaseClient" {}
+variable "Host" {}
+variable "ApiTokenSalt" {}
+variable "AdminJwtSecret" {}
+variable "AppKeys" {}
+variable "TransferTokenSalt" {}
+variable "JwtSecret" {}
+variable "FileBackupS3Path" {}
+variable "NodeEnv" {}
+variable "DatabasePort" {}
+variable "DatabaseHost" {}
+variable "DatabaseName" {}
+variable "DatabaseUserName" {}
+variable "DatabasePassword" {}
+variable "DatabaseSslEnable" {}
+variable "AppEnv" {}
