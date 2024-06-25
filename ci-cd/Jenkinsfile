@@ -14,7 +14,7 @@ pipeline {
         stage('Init') {
             steps {
                 script {
-                    echo '<======== Downloading Jenkins Env file ==========>'
+                    echo '<======== Downloading Jenkins Env file ===========>'
                     sh 'aws s3 cp $JENKINS_ENV_S3_FILE_PATH jenkins-env.groovy'
                     load 'jenkins-env.groovy'
                 }
