@@ -881,6 +881,7 @@ export interface ApiHomepageHomepage extends Schema.SingleType {
     BetterForEveryone: Attribute.Component<'elements.card'>;
     customerStories: Attribute.Component<'elements.customer-stories'>;
     reachOutSection: Attribute.Component<'elements.card'>;
+    seo: Attribute.Component<'seo.meta'>;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
@@ -945,7 +946,7 @@ export interface ApiTabContentTabContent extends Schema.CollectionType {
   attributes: {
     TabContent: Attribute.Component<'elements.card'> & Attribute.Required;
     heading: Attribute.String & Attribute.Required;
-    justRelease: Attribute.Component<'row.list-wrapper'> & Attribute.Required;
+    justRelease: Attribute.Component<'row.list-wrapper'>;
     Links: Attribute.Component<'elements.list', true>;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
@@ -989,6 +990,7 @@ export interface ApiTechnologyConsultingTechnologyConsulting
     reachOut: Attribute.Component<'elements.card'>;
     faqs: Attribute.Component<'row.faq-row'>;
     technology_consulting_intro: Attribute.Component<'row.info-card-row'>;
+    seo: Attribute.Component<'seo.meta'>;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;

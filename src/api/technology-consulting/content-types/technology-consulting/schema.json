@@ -66,6 +66,11 @@
       "type": "component",
       "repeatable": false,
       "component": "row.info-card-row"
+    },
+    "seo": {
+      "type": "component",
+      "repeatable": false,
+      "component": "seo.meta"
     }
   }
 }

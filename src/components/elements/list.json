@@ -8,7 +8,7 @@
   "attributes": {
     "title": {
       "type": "string",
-      "required": true
+      "required": false
     },
     "image": {
       "type": "media",
@@ -20,6 +20,9 @@
     },
     "description": {
       "type": "text"
+    },
+    "url": {
+      "type": "string"
     }
   }
 }

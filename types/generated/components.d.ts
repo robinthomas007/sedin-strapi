@@ -84,9 +84,10 @@ export interface ElementsList extends Schema.Component {
     description: '';
   };
   attributes: {
-    title: Attribute.String & Attribute.Required;
+    title: Attribute.String;
     image: Attribute.Media;
     description: Attribute.Text;
+    url: Attribute.String;
   };
 }
 
@@ -191,8 +192,19 @@ export interface RowListWrapper extends Schema.Component {
     description: '';
   };
   attributes: {
-    title: Attribute.String & Attribute.Required;
-    listItem: Attribute.Component<'elements.list', true> & Attribute.Required;
+    title: Attribute.String;
+    listItem: Attribute.Component<'elements.list', true>;
+  };
+}
+
+export interface SeoMeta extends Schema.Component {
+  collectionName: 'components_seo_metas';
+  info: {
+    displayName: 'Meta';
+  };
+  attributes: {
+    metaTitle: Attribute.String & Attribute.Required;
+    metaDescription: Attribute.Text & Attribute.Required;
   };
 }
 
@@ -214,6 +226,7 @@ declare module '@strapi/types' {
       'row.faq-row': RowFaqRow;
       'row.info-card-row': RowInfoCardRow;
       'row.list-wrapper': RowListWrapper;
+      'seo.meta': SeoMeta;
     }
   }
 }

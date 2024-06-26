@@ -8,13 +8,13 @@
   "attributes": {
     "title": {
       "type": "string",
-      "required": true
+      "required": false
     },
     "listItem": {
       "type": "component",
       "repeatable": true,
       "component": "elements.list",
-      "required": true
+      "required": false
     }
   }
 }

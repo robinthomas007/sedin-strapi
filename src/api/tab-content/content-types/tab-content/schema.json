@@ -26,7 +26,7 @@
       "type": "component",
       "repeatable": false,
       "component": "row.list-wrapper",
-      "required": true
+      "required": false
     },
     "Links": {
       "type": "component",
