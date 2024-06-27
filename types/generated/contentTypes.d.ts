@@ -882,6 +882,7 @@ export interface ApiHomepageHomepage extends Schema.SingleType {
     customerStories: Attribute.Component<'elements.customer-stories'>;
     reachOutSection: Attribute.Component<'elements.card'>;
     seo: Attribute.Component<'seo.meta'>;
+    fixedSectionImage: Attribute.Media & Attribute.Required;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
