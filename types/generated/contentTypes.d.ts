@@ -788,6 +788,49 @@ export interface PluginUsersPermissionsUser extends Schema.CollectionType {
   };
 }
 
+export interface ApiDigitalServiceDigitalService extends Schema.CollectionType {
+  collectionName: 'digital_services';
+  info: {
+    singularName: 'digital-service';
+    pluralName: 'digital-services';
+    displayName: 'Digital Service';
+    description: '';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    slug: Attribute.String & Attribute.Required & Attribute.Unique;
+    seo: Attribute.Component<'seo.meta'>;
+    breadcrumbs: Attribute.Component<'elements.list', true>;
+    scrollerList: Attribute.Component<'elements.list', true>;
+    headerSection: Attribute.Component<'elements.card'>;
+    whatWeBetter: Attribute.Component<'row.card-row'>;
+    knowUsBetter: Attribute.Component<'row.card-row'>;
+    statitics: Attribute.Component<'elements.statitics', true>;
+    howWeBetter: Attribute.Component<'row.card-row'>;
+    customerStories: Attribute.Component<'row.card-row'>;
+    reachOut: Attribute.Component<'elements.card'>;
+    faqs: Attribute.Component<'row.faq-row'>;
+    intro_section: Attribute.Component<'row.info-card-row'>;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::digital-service.digital-service',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::digital-service.digital-service',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
 export interface ApiFooterFooter extends Schema.SingleType {
   collectionName: 'footers';
   info: {
@@ -1028,6 +1071,7 @@ declare module '@strapi/types' {
       'plugin::users-permissions.permission': PluginUsersPermissionsPermission;
       'plugin::users-permissions.role': PluginUsersPermissionsRole;
       'plugin::users-permissions.user': PluginUsersPermissionsUser;
+      'api::digital-service.digital-service': ApiDigitalServiceDigitalService;
       'api::footer.footer': ApiFooterFooter;
       'api::header.header': ApiHeaderHeader;
       'api::homepage.homepage': ApiHomepageHomepage;

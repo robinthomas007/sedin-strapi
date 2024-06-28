@@ -70,10 +70,12 @@ export interface ElementsInfoCard extends Schema.Component {
   collectionName: 'components_elements_info_cards';
   info: {
     displayName: 'infoCard';
+    description: '';
   };
   attributes: {
     title: Attribute.String & Attribute.Required;
     description: Attribute.Text;
+    image: Attribute.Media;
   };
 }
 

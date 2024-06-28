@@ -1,0 +1,81 @@
+{
+  "kind": "collectionType",
+  "collectionName": "digital_services",
+  "info": {
+    "singularName": "digital-service",
+    "pluralName": "digital-services",
+    "displayName": "Digital Service",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "slug": {
+      "type": "string",
+      "unique": true,
+      "required": true
+    },
+    "seo": {
+      "type": "component",
+      "repeatable": false,
+      "component": "seo.meta"
+    },
+    "breadcrumbs": {
+      "type": "component",
+      "repeatable": true,
+      "component": "elements.list"
+    },
+    "scrollerList": {
+      "type": "component",
+      "repeatable": true,
+      "component": "elements.list"
+    },
+    "headerSection": {
+      "type": "component",
+      "repeatable": false,
+      "component": "elements.card"
+    },
+    "whatWeBetter": {
+      "type": "component",
+      "repeatable": false,
+      "component": "row.card-row"
+    },
+    "knowUsBetter": {
+      "type": "component",
+      "repeatable": false,
+      "component": "row.card-row"
+    },
+    "statitics": {
+      "type": "component",
+      "repeatable": true,
+      "component": "elements.statitics"
+    },
+    "howWeBetter": {
+      "type": "component",
+      "repeatable": false,
+      "component": "row.card-row"
+    },
+    "customerStories": {
+      "type": "component",
+      "repeatable": false,
+      "component": "row.card-row"
+    },
+    "reachOut": {
+      "type": "component",
+      "repeatable": false,
+      "component": "elements.card"
+    },
+    "faqs": {
+      "type": "component",
+      "repeatable": false,
+      "component": "row.faq-row"
+    },
+    "intro_section": {
+      "type": "component",
+      "repeatable": false,
+      "component": "row.info-card-row"
+    }
+  }
+}

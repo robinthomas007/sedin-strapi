@@ -1,7 +1,8 @@
 {
   "collectionName": "components_elements_info_cards",
   "info": {
-    "displayName": "infoCard"
+    "displayName": "infoCard",
+    "description": ""
   },
   "options": {},
   "attributes": {
@@ -11,6 +12,13 @@
     },
     "description": {
       "type": "text"
+    },
+    "image": {
+      "allowedTypes": [
+        "images"
+      ],
+      "type": "media",
+      "multiple": false
     }
   }
 }
