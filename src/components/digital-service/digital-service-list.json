@@ -1,0 +1,17 @@
+{
+  "collectionName": "components_digital_service_lists",
+  "info": {
+    "displayName": "Digital Service List"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "services": {
+      "type": "component",
+      "repeatable": true,
+      "component": "digital-service.digital-service"
+    }
+  }
+}

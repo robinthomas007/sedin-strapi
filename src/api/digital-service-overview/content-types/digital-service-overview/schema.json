@@ -1,10 +1,10 @@
 {
   "kind": "singleType",
-  "collectionName": "technology_consultings",
+  "collectionName": "digital_service_overviews",
   "info": {
-    "singularName": "technology-consulting",
-    "pluralName": "technology-consultings",
-    "displayName": "Technology Consulting",
+    "singularName": "digital-service-overview",
+    "pluralName": "digital-service-overviews",
+    "displayName": "Digital Service Overview",
     "description": ""
   },
   "options": {
@@ -12,65 +12,75 @@
   },
   "pluginOptions": {},
   "attributes": {
+    "seo": {
+      "type": "component",
+      "repeatable": false,
+      "component": "seo.meta"
+    },
+    "digital_services": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::digital-service.digital-service"
+    },
     "breadcrumbs": {
       "type": "component",
       "repeatable": true,
-      "component": "elements.list"
+      "component": "elements.link-list"
     },
     "scrollerList": {
       "type": "component",
       "repeatable": true,
-      "component": "elements.list"
+      "component": "elements.link-list"
     },
     "headerSection": {
       "type": "component",
       "repeatable": false,
       "component": "elements.card"
     },
-    "whatWeBetter": {
+    "intro_section": {
       "type": "component",
       "repeatable": false,
       "component": "row.card-row"
     },
-    "knowUsBetter": {
+    "introSectionTwo": {
       "type": "component",
       "repeatable": false,
       "component": "row.card-row"
+    },
+    "clients": {
+      "type": "component",
+      "repeatable": true,
+      "component": "elements.list"
+    },
+    "services": {
+      "type": "component",
+      "repeatable": false,
+      "component": "digital-service.digital-service-list"
     },
     "statitics": {
       "type": "component",
       "repeatable": true,
       "component": "elements.statitics"
     },
-    "howWeBetter": {
+    "howWeBuilt": {
       "type": "component",
       "repeatable": false,
-      "component": "row.card-row"
+      "component": "elements.card"
     },
-    "customerStories": {
+    "customerStory": {
       "type": "component",
       "repeatable": false,
-      "component": "row.card-row"
+      "component": "elements.info-card"
     },
     "reachOut": {
       "type": "component",
       "repeatable": false,
       "component": "elements.card"
     },
-    "faqs": {
+    "caseStudy": {
       "type": "component",
       "repeatable": false,
-      "component": "row.faq-row"
-    },
-    "technology_consulting_intro": {
-      "type": "component",
-      "repeatable": false,
-      "component": "row.info-card-row"
-    },
-    "seo": {
-      "type": "component",
-      "repeatable": false,
-      "component": "seo.meta"
+      "component": "row.card-row"
     }
   }
 }

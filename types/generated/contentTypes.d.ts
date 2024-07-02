@@ -801,18 +801,22 @@ export interface ApiDigitalServiceDigitalService extends Schema.CollectionType {
   };
   attributes: {
     slug: Attribute.String & Attribute.Required & Attribute.Unique;
-    seo: Attribute.Component<'seo.meta'>;
-    breadcrumbs: Attribute.Component<'elements.list', true>;
-    scrollerList: Attribute.Component<'elements.list', true>;
-    headerSection: Attribute.Component<'elements.card'>;
-    whatWeBetter: Attribute.Component<'row.card-row'>;
-    knowUsBetter: Attribute.Component<'row.card-row'>;
-    statitics: Attribute.Component<'elements.statitics', true>;
-    howWeBetter: Attribute.Component<'row.card-row'>;
-    customerStories: Attribute.Component<'row.card-row'>;
-    reachOut: Attribute.Component<'elements.card'>;
-    faqs: Attribute.Component<'row.faq-row'>;
-    intro_section: Attribute.Component<'row.info-card-row'>;
+    seo: Attribute.Component<'seo.meta'> & Attribute.Required;
+    breadcrumbs: Attribute.Component<'elements.link-list', true> &
+      Attribute.Required;
+    scrollerList: Attribute.Component<'elements.link-list', true> &
+      Attribute.Required;
+    headerSection: Attribute.Component<'elements.card'> & Attribute.Required;
+    intro_section: Attribute.Component<'row.info-card-row'> &
+      Attribute.Required;
+    whatWeBetter: Attribute.Component<'row.card-row'> & Attribute.Required;
+    knowUsBetter: Attribute.Component<'row.card-row'> & Attribute.Required;
+    statitics: Attribute.Component<'elements.statitics', true> &
+      Attribute.Required;
+    howWeBetter: Attribute.Component<'row.card-row'> & Attribute.Required;
+    customerStories: Attribute.Component<'row.card-row'> & Attribute.Required;
+    reachOut: Attribute.Component<'elements.card'> & Attribute.Required;
+    faqs: Attribute.Component<'row.faq-row'> & Attribute.Required;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
@@ -824,6 +828,55 @@ export interface ApiDigitalServiceDigitalService extends Schema.CollectionType {
       Attribute.Private;
     updatedBy: Attribute.Relation<
       'api::digital-service.digital-service',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
+export interface ApiDigitalServiceOverviewDigitalServiceOverview
+  extends Schema.SingleType {
+  collectionName: 'digital_service_overviews';
+  info: {
+    singularName: 'digital-service-overview';
+    pluralName: 'digital-service-overviews';
+    displayName: 'Digital Service Overview';
+    description: '';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    seo: Attribute.Component<'seo.meta'>;
+    digital_services: Attribute.Relation<
+      'api::digital-service-overview.digital-service-overview',
+      'oneToMany',
+      'api::digital-service.digital-service'
+    >;
+    breadcrumbs: Attribute.Component<'elements.link-list', true>;
+    scrollerList: Attribute.Component<'elements.link-list', true>;
+    headerSection: Attribute.Component<'elements.card'>;
+    intro_section: Attribute.Component<'row.card-row'>;
+    introSectionTwo: Attribute.Component<'row.card-row'>;
+    clients: Attribute.Component<'elements.list', true>;
+    services: Attribute.Component<'digital-service.digital-service-list'>;
+    statitics: Attribute.Component<'elements.statitics', true>;
+    howWeBuilt: Attribute.Component<'elements.card'>;
+    customerStory: Attribute.Component<'elements.info-card'>;
+    reachOut: Attribute.Component<'elements.card'>;
+    caseStudy: Attribute.Component<'row.card-row'>;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::digital-service-overview.digital-service-overview',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::digital-service-overview.digital-service-overview',
       'oneToOne',
       'admin::user'
     > &
@@ -1010,49 +1063,6 @@ export interface ApiTabContentTabContent extends Schema.CollectionType {
   };
 }
 
-export interface ApiTechnologyConsultingTechnologyConsulting
-  extends Schema.SingleType {
-  collectionName: 'technology_consultings';
-  info: {
-    singularName: 'technology-consulting';
-    pluralName: 'technology-consultings';
-    displayName: 'Technology Consulting';
-    description: '';
-  };
-  options: {
-    draftAndPublish: true;
-  };
-  attributes: {
-    breadcrumbs: Attribute.Component<'elements.list', true>;
-    scrollerList: Attribute.Component<'elements.list', true>;
-    headerSection: Attribute.Component<'elements.card'>;
-    whatWeBetter: Attribute.Component<'row.card-row'>;
-    knowUsBetter: Attribute.Component<'row.card-row'>;
-    statitics: Attribute.Component<'elements.statitics', true>;
-    howWeBetter: Attribute.Component<'row.card-row'>;
-    customerStories: Attribute.Component<'row.card-row'>;
-    reachOut: Attribute.Component<'elements.card'>;
-    faqs: Attribute.Component<'row.faq-row'>;
-    technology_consulting_intro: Attribute.Component<'row.info-card-row'>;
-    seo: Attribute.Component<'seo.meta'>;
-    createdAt: Attribute.DateTime;
-    updatedAt: Attribute.DateTime;
-    publishedAt: Attribute.DateTime;
-    createdBy: Attribute.Relation<
-      'api::technology-consulting.technology-consulting',
-      'oneToOne',
-      'admin::user'
-    > &
-      Attribute.Private;
-    updatedBy: Attribute.Relation<
-      'api::technology-consulting.technology-consulting',
-      'oneToOne',
-      'admin::user'
-    > &
-      Attribute.Private;
-  };
-}
-
 declare module '@strapi/types' {
   export module Shared {
     export interface ContentTypes {
@@ -1072,12 +1082,12 @@ declare module '@strapi/types' {
       'plugin::users-permissions.role': PluginUsersPermissionsRole;
       'plugin::users-permissions.user': PluginUsersPermissionsUser;
       'api::digital-service.digital-service': ApiDigitalServiceDigitalService;
+      'api::digital-service-overview.digital-service-overview': ApiDigitalServiceOverviewDigitalServiceOverview;
       'api::footer.footer': ApiFooterFooter;
       'api::header.header': ApiHeaderHeader;
       'api::homepage.homepage': ApiHomepageHomepage;
       'api::nav-content.nav-content': ApiNavContentNavContent;
       'api::tab-content.tab-content': ApiTabContentTabContent;
-      'api::technology-consulting.technology-consulting': ApiTechnologyConsultingTechnologyConsulting;
     }
   }
 }

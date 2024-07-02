@@ -1,0 +1,26 @@
+{
+  "collectionName": "components_digital_service_digital_services",
+  "info": {
+    "displayName": "Digital Services",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "description": {
+      "type": "text"
+    },
+    "cardImg": {
+      "type": "component",
+      "repeatable": true,
+      "component": "elements.image-card"
+    },
+    "button": {
+      "type": "component",
+      "repeatable": false,
+      "component": "elements.button-link"
+    }
+  }
+}

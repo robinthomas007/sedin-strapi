@@ -20,62 +20,74 @@
     "seo": {
       "type": "component",
       "repeatable": false,
-      "component": "seo.meta"
+      "component": "seo.meta",
+      "required": true
     },
     "breadcrumbs": {
       "type": "component",
       "repeatable": true,
-      "component": "elements.list"
+      "required": true,
+      "component": "elements.link-list"
     },
     "scrollerList": {
       "type": "component",
       "repeatable": true,
-      "component": "elements.list"
+      "required": true,
+      "component": "elements.link-list"
     },
     "headerSection": {
       "type": "component",
       "repeatable": false,
+      "required": true,
       "component": "elements.card"
+    },
+    "intro_section": {
+      "type": "component",
+      "repeatable": false,
+      "required": true,
+      "component": "row.info-card-row"
     },
     "whatWeBetter": {
       "type": "component",
       "repeatable": false,
+      "required": true,
       "component": "row.card-row"
     },
     "knowUsBetter": {
       "type": "component",
       "repeatable": false,
+      "required": true,
       "component": "row.card-row"
     },
     "statitics": {
       "type": "component",
       "repeatable": true,
+      "required": true,
       "component": "elements.statitics"
     },
     "howWeBetter": {
       "type": "component",
       "repeatable": false,
+      "required": true,
       "component": "row.card-row"
     },
     "customerStories": {
       "type": "component",
       "repeatable": false,
+      "required": true,
       "component": "row.card-row"
     },
     "reachOut": {
       "type": "component",
       "repeatable": false,
+      "required": true,
       "component": "elements.card"
     },
     "faqs": {
       "type": "component",
       "repeatable": false,
+      "required": true,
       "component": "row.faq-row"
-    },
-    "intro_section": {
-      "type": "component",
-      "repeatable": false,
-      "component": "row.info-card-row"
     }
   }
 }

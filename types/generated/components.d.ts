@@ -14,6 +14,31 @@ export interface ContactBlockContactUsBlock extends Schema.Component {
   };
 }
 
+export interface DigitalServiceDigitalServiceList extends Schema.Component {
+  collectionName: 'components_digital_service_lists';
+  info: {
+    displayName: 'Digital Service List';
+  };
+  attributes: {
+    title: Attribute.String;
+    services: Attribute.Component<'digital-service.digital-service', true>;
+  };
+}
+
+export interface DigitalServiceDigitalService extends Schema.Component {
+  collectionName: 'components_digital_service_digital_services';
+  info: {
+    displayName: 'Digital Services';
+    description: '';
+  };
+  attributes: {
+    title: Attribute.String;
+    description: Attribute.Text;
+    cardImg: Attribute.Component<'elements.image-card', true>;
+    button: Attribute.Component<'elements.button-link'>;
+  };
+}
+
 export interface ElementsButtonLink extends Schema.Component {
   collectionName: 'components_elements_button_links';
   info: {
@@ -66,6 +91,17 @@ export interface ElementsFaqList extends Schema.Component {
   };
 }
 
+export interface ElementsImageCard extends Schema.Component {
+  collectionName: 'components_elements_image_cards';
+  info: {
+    displayName: 'Image Card';
+  };
+  attributes: {
+    title: Attribute.String & Attribute.Required;
+    image: Attribute.Media & Attribute.Required;
+  };
+}
+
 export interface ElementsInfoCard extends Schema.Component {
   collectionName: 'components_elements_info_cards';
   info: {
@@ -76,6 +112,17 @@ export interface ElementsInfoCard extends Schema.Component {
     title: Attribute.String & Attribute.Required;
     description: Attribute.Text;
     image: Attribute.Media;
+  };
+}
+
+export interface ElementsLinkList extends Schema.Component {
+  collectionName: 'components_elements_link_lists';
+  info: {
+    displayName: 'Link List';
+  };
+  attributes: {
+    title: Attribute.String & Attribute.Required;
+    url: Attribute.String;
   };
 }
 
@@ -214,11 +261,15 @@ declare module '@strapi/types' {
   export module Shared {
     export interface Components {
       'contact-block.contact-us-block': ContactBlockContactUsBlock;
+      'digital-service.digital-service-list': DigitalServiceDigitalServiceList;
+      'digital-service.digital-service': DigitalServiceDigitalService;
       'elements.button-link': ElementsButtonLink;
       'elements.card': ElementsCard;
       'elements.customer-stories': ElementsCustomerStories;
       'elements.faq-list': ElementsFaqList;
+      'elements.image-card': ElementsImageCard;
       'elements.info-card': ElementsInfoCard;
+      'elements.link-list': ElementsLinkList;
       'elements.list': ElementsList;
       'elements.nav-tab': ElementsNavTab;
       'elements.slider': ElementsSlider;
