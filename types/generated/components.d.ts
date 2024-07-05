@@ -71,12 +71,13 @@ export interface ElementsCard extends Schema.Component {
 export interface ElementsCustomerStories extends Schema.Component {
   collectionName: 'components_elements_customer_stories';
   info: {
-    displayName: 'customerStories';
+    displayName: 'iframeCard';
     description: '';
   };
   attributes: {
     title: Attribute.String & Attribute.Required;
     url: Attribute.String & Attribute.Required;
+    button: Attribute.Component<'elements.button-link'>;
   };
 }
 

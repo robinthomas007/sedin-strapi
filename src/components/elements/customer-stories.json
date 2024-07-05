@@ -1,7 +1,7 @@
 {
   "collectionName": "components_elements_customer_stories",
   "info": {
-    "displayName": "customerStories",
+    "displayName": "iframeCard",
     "description": ""
   },
   "options": {},
@@ -13,6 +13,11 @@
     "url": {
       "type": "string",
       "required": true
+    },
+    "button": {
+      "type": "component",
+      "repeatable": false,
+      "component": "elements.button-link"
     }
   }
 }

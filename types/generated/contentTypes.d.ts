@@ -862,10 +862,10 @@ export interface ApiDigitalServiceOverviewDigitalServiceOverview
     clients: Attribute.Component<'elements.list', true>;
     digitalservices: Attribute.Component<'digital-service.digital-service-list'>;
     statitics: Attribute.Component<'elements.statitics', true>;
-    howWeBuilt: Attribute.Component<'elements.card'>;
-    customerStory: Attribute.Component<'elements.info-card'>;
     reachOut: Attribute.Component<'elements.card'>;
     caseStudy: Attribute.Component<'row.card-row'>;
+    customerStory: Attribute.Component<'elements.customer-stories'>;
+    howWeBuilt: Attribute.Component<'elements.customer-stories'>;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
