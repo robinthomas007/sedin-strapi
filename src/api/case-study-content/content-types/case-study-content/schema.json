@@ -1,0 +1,22 @@
+{
+  "kind": "collectionType",
+  "collectionName": "case_study_contents",
+  "info": {
+    "singularName": "case-study-content",
+    "pluralName": "case-study-contents",
+    "displayName": "Case Study Content",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "description": {
+      "type": "text"
+    }
+  }
+}

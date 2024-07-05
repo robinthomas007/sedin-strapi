@@ -788,6 +788,76 @@ export interface PluginUsersPermissionsUser extends Schema.CollectionType {
   };
 }
 
+export interface ApiCaseStudyCaseStudy extends Schema.CollectionType {
+  collectionName: 'case_studies';
+  info: {
+    singularName: 'case-study';
+    pluralName: 'case-studies';
+    displayName: 'Case Study';
+    description: '';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    slug: Attribute.String & Attribute.Required & Attribute.Unique;
+    title: Attribute.String & Attribute.Required;
+    case_study_content: Attribute.Relation<
+      'api::case-study.case-study',
+      'oneToOne',
+      'api::case-study-content.case-study-content'
+    >;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::case-study.case-study',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::case-study.case-study',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
+export interface ApiCaseStudyContentCaseStudyContent
+  extends Schema.CollectionType {
+  collectionName: 'case_study_contents';
+  info: {
+    singularName: 'case-study-content';
+    pluralName: 'case-study-contents';
+    displayName: 'Case Study Content';
+    description: '';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    title: Attribute.String;
+    description: Attribute.Text;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::case-study-content.case-study-content',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::case-study-content.case-study-content',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
 export interface ApiDigitalServiceDigitalService extends Schema.CollectionType {
   collectionName: 'digital_services';
   info: {
@@ -1081,6 +1151,8 @@ declare module '@strapi/types' {
       'plugin::users-permissions.permission': PluginUsersPermissionsPermission;
       'plugin::users-permissions.role': PluginUsersPermissionsRole;
       'plugin::users-permissions.user': PluginUsersPermissionsUser;
+      'api::case-study.case-study': ApiCaseStudyCaseStudy;
+      'api::case-study-content.case-study-content': ApiCaseStudyContentCaseStudyContent;
       'api::digital-service.digital-service': ApiDigitalServiceDigitalService;
       'api::digital-service-overview.digital-service-overview': ApiDigitalServiceOverviewDigitalServiceOverview;
       'api::footer.footer': ApiFooterFooter;
