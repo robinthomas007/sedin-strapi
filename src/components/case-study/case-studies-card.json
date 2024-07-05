@@ -1,0 +1,25 @@
+{
+  "collectionName": "components_case_study_case_studies_cards",
+  "info": {
+    "displayName": "case studies card"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "image": {
+      "allowedTypes": [
+        "images"
+      ],
+      "type": "media",
+      "multiple": false
+    },
+    "cardItems": {
+      "type": "component",
+      "repeatable": true,
+      "component": "elements.info-card"
+    }
+  }
+}

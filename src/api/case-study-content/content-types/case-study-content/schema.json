@@ -17,6 +17,68 @@
     },
     "description": {
       "type": "text"
+    },
+    "breadcrumbs": {
+      "type": "component",
+      "repeatable": true,
+      "component": "elements.link-list",
+      "required": true
+    },
+    "scrollerList": {
+      "type": "component",
+      "repeatable": true,
+      "component": "elements.link-list",
+      "required": true
+    },
+    "seo": {
+      "type": "component",
+      "repeatable": false,
+      "component": "seo.meta",
+      "required": true
+    },
+    "backgroundVideo": {
+      "type": "media",
+      "multiple": false,
+      "required": true,
+      "allowedTypes": [
+        "videos",
+        "images"
+      ]
+    },
+    "caseStudiesIntro": {
+      "type": "component",
+      "repeatable": false,
+      "component": "case-study.case-studies-main-intro"
+    },
+    "caseStudiesSlider": {
+      "type": "component",
+      "repeatable": false,
+      "component": "row.info-card-row"
+    },
+    "technologies": {
+      "type": "component",
+      "repeatable": true,
+      "component": "elements.list"
+    },
+    "caseStudiesStatistics": {
+      "type": "component",
+      "repeatable": false,
+      "component": "elements.image-card"
+    },
+    "effectiveness": {
+      "type": "component",
+      "repeatable": false,
+      "component": "row.image-card-wrapper"
+    },
+    "reachOut": {
+      "type": "component",
+      "repeatable": false,
+      "component": "elements.card"
+    },
+    "relatedCaseStudy": {
+      "type": "component",
+      "repeatable": false,
+      "component": "row.card-row"
     }
   }
 }

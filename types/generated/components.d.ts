@@ -1,5 +1,31 @@
 import type { Schema, Attribute } from '@strapi/strapi';
 
+export interface CaseStudyCaseStudiesCard extends Schema.Component {
+  collectionName: 'components_case_study_case_studies_cards';
+  info: {
+    displayName: 'case studies card';
+  };
+  attributes: {
+    title: Attribute.String & Attribute.Required;
+    image: Attribute.Media;
+    cardItems: Attribute.Component<'elements.info-card', true>;
+  };
+}
+
+export interface CaseStudyCaseStudiesMainIntro extends Schema.Component {
+  collectionName: 'components_case_study_case_studies_main_intros';
+  info: {
+    displayName: 'case studies main intro';
+    description: '';
+  };
+  attributes: {
+    title: Attribute.String & Attribute.Required;
+    introItems: Attribute.Component<'elements.info-card', true>;
+    cardTitle: Attribute.String & Attribute.Required;
+    caseStudiesCard: Attribute.Component<'case-study.case-studies-card', true>;
+  };
+}
+
 export interface ContactBlockContactUsBlock extends Schema.Component {
   collectionName: 'components_contact_block_contact_us_blocks';
   info: {
@@ -225,14 +251,27 @@ export interface RowFaqRow extends Schema.Component {
   };
 }
 
+export interface RowImageCardWrapper extends Schema.Component {
+  collectionName: 'components_row_image_card_wrappers';
+  info: {
+    displayName: 'image card wrapper';
+  };
+  attributes: {
+    title: Attribute.String & Attribute.Required;
+    imageCard: Attribute.Component<'elements.image-card', true>;
+  };
+}
+
 export interface RowInfoCardRow extends Schema.Component {
   collectionName: 'components_row_info_card_rows';
   info: {
     displayName: 'InfoCardRow';
+    description: '';
   };
   attributes: {
     title: Attribute.String & Attribute.Required;
     infoCard: Attribute.Component<'elements.info-card', true>;
+    description: Attribute.Text;
   };
 }
 
@@ -262,6 +301,8 @@ export interface SeoMeta extends Schema.Component {
 declare module '@strapi/types' {
   export module Shared {
     export interface Components {
+      'case-study.case-studies-card': CaseStudyCaseStudiesCard;
+      'case-study.case-studies-main-intro': CaseStudyCaseStudiesMainIntro;
       'contact-block.contact-us-block': ContactBlockContactUsBlock;
       'digital-service.digital-service-list': DigitalServiceDigitalServiceList;
       'digital-service.digital-service': DigitalServiceDigitalService;
@@ -279,6 +320,7 @@ declare module '@strapi/types' {
       'elements.tab': ElementsTab;
       'row.card-row': RowCardRow;
       'row.faq-row': RowFaqRow;
+      'row.image-card-wrapper': RowImageCardWrapper;
       'row.info-card-row': RowInfoCardRow;
       'row.list-wrapper': RowListWrapper;
       'seo.meta': SeoMeta;

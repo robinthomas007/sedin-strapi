@@ -1,0 +1,18 @@
+{
+  "collectionName": "components_row_image_card_wrappers",
+  "info": {
+    "displayName": "image card wrapper"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "imageCard": {
+      "type": "component",
+      "repeatable": true,
+      "component": "elements.image-card"
+    }
+  }
+}

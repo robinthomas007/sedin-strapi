@@ -1,0 +1,28 @@
+{
+  "collectionName": "components_case_study_case_studies_main_intros",
+  "info": {
+    "displayName": "case studies main intro",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "introItems": {
+      "type": "component",
+      "repeatable": true,
+      "component": "elements.info-card"
+    },
+    "cardTitle": {
+      "type": "string",
+      "required": true
+    },
+     "caseStudiesCard": {
+      "type": "component",
+      "repeatable": true,
+      "component": "case-study.case-studies-card"
+    }
+  }
+}

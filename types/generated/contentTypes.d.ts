@@ -840,6 +840,19 @@ export interface ApiCaseStudyContentCaseStudyContent
   attributes: {
     title: Attribute.String;
     description: Attribute.Text;
+    breadcrumbs: Attribute.Component<'elements.link-list', true> &
+      Attribute.Required;
+    scrollerList: Attribute.Component<'elements.link-list', true> &
+      Attribute.Required;
+    seo: Attribute.Component<'seo.meta'> & Attribute.Required;
+    backgroundVideo: Attribute.Media & Attribute.Required;
+    caseStudiesIntro: Attribute.Component<'case-study.case-studies-main-intro'>;
+    caseStudiesSlider: Attribute.Component<'row.info-card-row'>;
+    technologies: Attribute.Component<'elements.list', true>;
+    caseStudiesStatistics: Attribute.Component<'elements.image-card'>;
+    effectiveness: Attribute.Component<'row.image-card-wrapper'>;
+    reachOut: Attribute.Component<'elements.card'>;
+    relatedCaseStudy: Attribute.Component<'row.card-row'>;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
