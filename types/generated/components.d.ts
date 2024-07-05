@@ -12,16 +12,15 @@ export interface CaseStudyCaseStudiesCard extends Schema.Component {
   };
 }
 
-export interface CaseStudyCaseStudiesMainIntro extends Schema.Component {
-  collectionName: 'components_case_study_case_studies_main_intros';
+export interface CaseStudyCaseStudyIntro extends Schema.Component {
+  collectionName: 'components_case_study_case_study_intros';
   info: {
-    displayName: 'case studies main intro';
-    description: '';
+    displayName: 'case-study-intro';
   };
   attributes: {
-    title: Attribute.String & Attribute.Required;
-    introItems: Attribute.Component<'elements.info-card', true>;
+    title: Attribute.String;
     cardTitle: Attribute.String & Attribute.Required;
+    introItems: Attribute.Component<'elements.info-card', true>;
     caseStudiesCard: Attribute.Component<'case-study.case-studies-card', true>;
   };
 }
@@ -302,7 +301,7 @@ declare module '@strapi/types' {
   export module Shared {
     export interface Components {
       'case-study.case-studies-card': CaseStudyCaseStudiesCard;
-      'case-study.case-studies-main-intro': CaseStudyCaseStudiesMainIntro;
+      'case-study.case-study-intro': CaseStudyCaseStudyIntro;
       'contact-block.contact-us-block': ContactBlockContactUsBlock;
       'digital-service.digital-service-list': DigitalServiceDigitalServiceList;
       'digital-service.digital-service': DigitalServiceDigitalService;

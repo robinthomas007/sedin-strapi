@@ -45,11 +45,6 @@
         "images"
       ]
     },
-    "caseStudiesIntro": {
-      "type": "component",
-      "repeatable": false,
-      "component": "case-study.case-studies-main-intro"
-    },
     "caseStudiesSlider": {
       "type": "component",
       "repeatable": false,
@@ -79,6 +74,11 @@
       "type": "component",
       "repeatable": false,
       "component": "row.card-row"
+    },
+    "caseStudyIntro": {
+      "type": "component",
+      "repeatable": false,
+      "component": "case-study.case-study-intro"
     }
   }
 }

@@ -1,12 +1,14 @@
 {
-  "collectionName": "components_case_study_case_studies_main_intros",
+  "collectionName": "components_case_study_case_study_intros",
   "info": {
-    "displayName": "case studies main intro",
-    "description": ""
+    "displayName": "case-study-intro"
   },
   "options": {},
   "attributes": {
     "title": {
+      "type": "string"
+    },
+    "cardTitle": {
       "type": "string",
       "required": true
     },
@@ -15,11 +17,7 @@
       "repeatable": true,
       "component": "elements.info-card"
     },
-    "cardTitle": {
-      "type": "string",
-      "required": true
-    },
-     "caseStudiesCard": {
+    "caseStudiesCard": {
       "type": "component",
       "repeatable": true,
       "component": "case-study.case-studies-card"

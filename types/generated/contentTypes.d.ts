@@ -846,13 +846,13 @@ export interface ApiCaseStudyContentCaseStudyContent
       Attribute.Required;
     seo: Attribute.Component<'seo.meta'> & Attribute.Required;
     backgroundVideo: Attribute.Media & Attribute.Required;
-    caseStudiesIntro: Attribute.Component<'case-study.case-studies-main-intro'>;
     caseStudiesSlider: Attribute.Component<'row.info-card-row'>;
     technologies: Attribute.Component<'elements.list', true>;
     caseStudiesStatistics: Attribute.Component<'elements.image-card'>;
     effectiveness: Attribute.Component<'row.image-card-wrapper'>;
     reachOut: Attribute.Component<'elements.card'>;
     relatedCaseStudy: Attribute.Component<'row.card-row'>;
+    caseStudyIntro: Attribute.Component<'case-study.case-study-intro'>;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
