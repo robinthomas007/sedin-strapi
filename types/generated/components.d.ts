@@ -207,6 +207,7 @@ export interface RowCardRow extends Schema.Component {
   attributes: {
     title: Attribute.String;
     description: Attribute.Text;
+    background: Attribute.Media;
     cards: Attribute.Component<'elements.card', true>;
   };
 }

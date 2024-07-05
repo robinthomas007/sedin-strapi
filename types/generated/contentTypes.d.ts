@@ -860,7 +860,7 @@ export interface ApiDigitalServiceOverviewDigitalServiceOverview
     intro_section: Attribute.Component<'row.card-row'>;
     introSectionTwo: Attribute.Component<'row.card-row'>;
     clients: Attribute.Component<'elements.list', true>;
-    services: Attribute.Component<'digital-service.digital-service-list'>;
+    digitalservices: Attribute.Component<'digital-service.digital-service-list'>;
     statitics: Attribute.Component<'elements.statitics', true>;
     howWeBuilt: Attribute.Component<'elements.card'>;
     customerStory: Attribute.Component<'elements.info-card'>;

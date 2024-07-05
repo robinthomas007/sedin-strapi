@@ -11,6 +11,15 @@
     "description": {
       "type": "text"
     },
+    "background": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "videos"
+      ]
+    },
     "cards": {
       "type": "component",
       "repeatable": true,

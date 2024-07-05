@@ -52,7 +52,7 @@
       "repeatable": true,
       "component": "elements.list"
     },
-    "services": {
+    "digitalservices": {
       "type": "component",
       "repeatable": false,
       "component": "digital-service.digital-service-list"
