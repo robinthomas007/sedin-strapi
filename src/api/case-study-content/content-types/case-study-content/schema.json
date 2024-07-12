@@ -50,11 +50,6 @@
       "repeatable": false,
       "component": "row.info-card-row"
     },
-    "technologies": {
-      "type": "component",
-      "repeatable": true,
-      "component": "elements.list"
-    },
     "caseStudiesStatistics": {
       "type": "component",
       "repeatable": false,
@@ -79,6 +74,11 @@
       "type": "component",
       "repeatable": false,
       "component": "case-study.case-study-intro"
+    },
+    "technologies": {
+      "type": "component",
+      "repeatable": false,
+      "component": "row.list-wrapper"
     }
   }
 }

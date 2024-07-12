@@ -847,12 +847,12 @@ export interface ApiCaseStudyContentCaseStudyContent
     seo: Attribute.Component<'seo.meta'> & Attribute.Required;
     backgroundVideo: Attribute.Media & Attribute.Required;
     caseStudiesSlider: Attribute.Component<'row.info-card-row'>;
-    technologies: Attribute.Component<'elements.list', true>;
     caseStudiesStatistics: Attribute.Component<'elements.image-card'>;
     effectiveness: Attribute.Component<'row.image-card-wrapper'>;
     reachOut: Attribute.Component<'elements.card'>;
     relatedCaseStudy: Attribute.Component<'row.card-row'>;
     caseStudyIntro: Attribute.Component<'case-study.case-study-intro'>;
+    technologies: Attribute.Component<'row.list-wrapper'>;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
