@@ -1,0 +1,85 @@
+{
+  "kind": "singleType",
+  "collectionName": "digital_enterprise_overviews",
+  "info": {
+    "singularName": "digital-enterprise-overview",
+    "pluralName": "digital-enterprise-overviews",
+    "displayName": "Digital Enterprise Overview"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "seo": {
+      "type": "component",
+      "repeatable": false,
+      "component": "seo.meta"
+    },
+    "digital_services": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::digital-service.digital-service"
+    },
+    "breadcrumbs": {
+      "type": "component",
+      "repeatable": true,
+      "component": "elements.link-list"
+    },
+    "scrollerList": {
+      "type": "component",
+      "repeatable": true,
+      "component": "elements.link-list"
+    },
+    "headerSection": {
+      "type": "component",
+      "repeatable": false,
+      "component": "elements.card"
+    },
+    "intro_section": {
+      "type": "component",
+      "repeatable": false,
+      "component": "row.card-row"
+    },
+    "introSectionTwo": {
+      "type": "component",
+      "repeatable": false,
+      "component": "row.card-row"
+    },
+    "clients": {
+      "type": "component",
+      "repeatable": true,
+      "component": "elements.list"
+    },
+    "digitalservices": {
+      "type": "component",
+      "repeatable": false,
+      "component": "digital-service.digital-service-list"
+    },
+    "statitics": {
+      "type": "component",
+      "repeatable": true,
+      "component": "elements.statitics"
+    },
+    "reachOut": {
+      "type": "component",
+      "repeatable": false,
+      "component": "elements.card"
+    },
+    "caseStudy": {
+      "type": "component",
+      "repeatable": false,
+      "component": "row.card-row"
+    },
+    "customerStory": {
+      "type": "component",
+      "repeatable": false,
+      "component": "elements.customer-stories"
+    },
+    "howWeBuilt": {
+      "type": "component",
+      "repeatable": false,
+      "component": "elements.customer-stories"
+    }
+  }
+}
