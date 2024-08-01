@@ -871,6 +871,54 @@ export interface ApiCaseStudyContentCaseStudyContent
   };
 }
 
+export interface ApiDigitalEnterpriseOverviewDigitalEnterpriseOverview
+  extends Schema.SingleType {
+  collectionName: 'digital_enterprise_overviews';
+  info: {
+    singularName: 'digital-enterprise-overview';
+    pluralName: 'digital-enterprise-overviews';
+    displayName: 'Digital Enterprise Overview';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    seo: Attribute.Component<'seo.meta'>;
+    digital_services: Attribute.Relation<
+      'api::digital-enterprise-overview.digital-enterprise-overview',
+      'oneToMany',
+      'api::digital-service.digital-service'
+    >;
+    breadcrumbs: Attribute.Component<'elements.link-list', true>;
+    scrollerList: Attribute.Component<'elements.link-list', true>;
+    headerSection: Attribute.Component<'elements.card'>;
+    intro_section: Attribute.Component<'row.card-row'>;
+    introSectionTwo: Attribute.Component<'row.card-row'>;
+    clients: Attribute.Component<'elements.list', true>;
+    digitalservices: Attribute.Component<'digital-service.digital-service-list'>;
+    statitics: Attribute.Component<'elements.statitics', true>;
+    reachOut: Attribute.Component<'elements.card'>;
+    caseStudy: Attribute.Component<'row.card-row'>;
+    customerStory: Attribute.Component<'elements.customer-stories'>;
+    howWeBuilt: Attribute.Component<'elements.customer-stories'>;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::digital-enterprise-overview.digital-enterprise-overview',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::digital-enterprise-overview.digital-enterprise-overview',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
 export interface ApiDigitalServiceDigitalService extends Schema.CollectionType {
   collectionName: 'digital_services';
   info: {
@@ -1166,6 +1214,7 @@ declare module '@strapi/types' {
       'plugin::users-permissions.user': PluginUsersPermissionsUser;
       'api::case-study.case-study': ApiCaseStudyCaseStudy;
       'api::case-study-content.case-study-content': ApiCaseStudyContentCaseStudyContent;
+      'api::digital-enterprise-overview.digital-enterprise-overview': ApiDigitalEnterpriseOverviewDigitalEnterpriseOverview;
       'api::digital-service.digital-service': ApiDigitalServiceDigitalService;
       'api::digital-service-overview.digital-service-overview': ApiDigitalServiceOverviewDigitalServiceOverview;
       'api::footer.footer': ApiFooterFooter;
