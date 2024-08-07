@@ -1,0 +1,81 @@
+{
+  "kind": "collectionType",
+  "collectionName": "digital_enterprises",
+  "info": {
+    "singularName": "digital-enterprise",
+    "pluralName": "digital-enterprises",
+    "displayName": "Digital Enterprise",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "slug": {
+      "type": "string",
+      "required": true,
+      "unique": true
+    },
+    "seo": {
+      "type": "component",
+      "repeatable": false,
+      "component": "seo.meta"
+    },
+    "breadcrumbs": {
+      "type": "component",
+      "repeatable": true,
+      "component": "elements.link-list"
+    },
+    "scrollerList": {
+      "type": "component",
+      "repeatable": true,
+      "component": "elements.link-list"
+    },
+    "headerSection": {
+      "type": "component",
+      "repeatable": false,
+      "component": "elements.card"
+    },
+    "intro_section": {
+      "type": "component",
+      "repeatable": false,
+      "component": "row.info-card-row"
+    },
+    "whatWeBetter": {
+      "type": "component",
+      "repeatable": false,
+      "component": "row.card-row"
+    },
+    "knowUsBetter": {
+      "type": "component",
+      "repeatable": false,
+      "component": "row.card-row"
+    },
+    "statitics": {
+      "type": "component",
+      "repeatable": true,
+      "component": "elements.statitics"
+    },
+    "howWeBetter": {
+      "type": "component",
+      "repeatable": false,
+      "component": "row.card-row"
+    },
+    "customerStories": {
+      "type": "component",
+      "repeatable": false,
+      "component": "row.card-row"
+    },
+    "reachOut": {
+      "type": "component",
+      "repeatable": false,
+      "component": "elements.card"
+    },
+    "faqs": {
+      "type": "component",
+      "repeatable": false,
+      "component": "row.faq-row"
+    }
+  }
+}

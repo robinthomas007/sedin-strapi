@@ -871,6 +871,50 @@ export interface ApiCaseStudyContentCaseStudyContent
   };
 }
 
+export interface ApiDigitalEnterpriseDigitalEnterprise
+  extends Schema.CollectionType {
+  collectionName: 'digital_enterprises';
+  info: {
+    singularName: 'digital-enterprise';
+    pluralName: 'digital-enterprises';
+    displayName: 'Digital Enterprise';
+    description: '';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    slug: Attribute.String & Attribute.Required & Attribute.Unique;
+    seo: Attribute.Component<'seo.meta'>;
+    breadcrumbs: Attribute.Component<'elements.link-list', true>;
+    scrollerList: Attribute.Component<'elements.link-list', true>;
+    headerSection: Attribute.Component<'elements.card'>;
+    intro_section: Attribute.Component<'row.info-card-row'>;
+    whatWeBetter: Attribute.Component<'row.card-row'>;
+    knowUsBetter: Attribute.Component<'row.card-row'>;
+    statitics: Attribute.Component<'elements.statitics', true>;
+    howWeBetter: Attribute.Component<'row.card-row'>;
+    customerStories: Attribute.Component<'row.card-row'>;
+    reachOut: Attribute.Component<'elements.card'>;
+    faqs: Attribute.Component<'row.faq-row'>;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::digital-enterprise.digital-enterprise',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::digital-enterprise.digital-enterprise',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
 export interface ApiDigitalEnterpriseOverviewDigitalEnterpriseOverview
   extends Schema.SingleType {
   collectionName: 'digital_enterprise_overviews';
@@ -1214,6 +1258,7 @@ declare module '@strapi/types' {
       'plugin::users-permissions.user': PluginUsersPermissionsUser;
       'api::case-study.case-study': ApiCaseStudyCaseStudy;
       'api::case-study-content.case-study-content': ApiCaseStudyContentCaseStudyContent;
+      'api::digital-enterprise.digital-enterprise': ApiDigitalEnterpriseDigitalEnterprise;
       'api::digital-enterprise-overview.digital-enterprise-overview': ApiDigitalEnterpriseOverviewDigitalEnterpriseOverview;
       'api::digital-service.digital-service': ApiDigitalServiceDigitalService;
       'api::digital-service-overview.digital-service-overview': ApiDigitalServiceOverviewDigitalServiceOverview;
