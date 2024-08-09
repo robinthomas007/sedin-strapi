@@ -30,6 +30,9 @@
     },
     "description2": {
       "type": "text"
+    },
+    "tag": {
+      "type": "string"
     }
   }
 }

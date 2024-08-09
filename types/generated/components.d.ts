@@ -90,6 +90,7 @@ export interface ElementsCard extends Schema.Component {
     cardimg: Attribute.Media;
     cardbtn: Attribute.Component<'elements.button-link'>;
     description2: Attribute.Text;
+    tag: Attribute.String;
   };
 }
 
