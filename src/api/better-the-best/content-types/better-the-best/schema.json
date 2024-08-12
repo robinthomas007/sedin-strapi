@@ -1,0 +1,64 @@
+{
+  "kind": "singleType",
+  "collectionName": "better_the_bests",
+  "info": {
+    "singularName": "better-the-best",
+    "pluralName": "better-the-bests",
+    "displayName": "Better the Best",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "seo": {
+      "type": "component",
+      "repeatable": false,
+      "component": "seo.meta"
+    },
+    "breadcrumbs": {
+      "type": "component",
+      "repeatable": true,
+      "component": "elements.link-list"
+    },
+    "heroBackgroundVideo": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "videos"
+      ]
+    },
+    "heroSection": {
+      "type": "component",
+      "repeatable": false,
+      "component": "elements.info-card"
+    },
+    "philosophy": {
+      "type": "component",
+      "repeatable": false,
+      "component": "row.info-card-row"
+    },
+    "vision": {
+      "type": "component",
+      "repeatable": false,
+      "component": "row.info-card-row"
+    },
+    "mission": {
+      "type": "component",
+      "repeatable": false,
+      "component": "row.info-card-row"
+    },
+    "value": {
+      "type": "component",
+      "repeatable": false,
+      "component": "row.info-card-row"
+    },
+    "identity": {
+      "type": "component",
+      "repeatable": false,
+      "component": "row.info-card-row"
+    }
+  }
+}

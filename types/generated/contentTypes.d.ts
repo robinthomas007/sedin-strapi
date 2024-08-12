@@ -788,6 +788,45 @@ export interface PluginUsersPermissionsUser extends Schema.CollectionType {
   };
 }
 
+export interface ApiBetterTheBestBetterTheBest extends Schema.SingleType {
+  collectionName: 'better_the_bests';
+  info: {
+    singularName: 'better-the-best';
+    pluralName: 'better-the-bests';
+    displayName: 'Better the Best';
+    description: '';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    seo: Attribute.Component<'seo.meta'>;
+    breadcrumbs: Attribute.Component<'elements.link-list', true>;
+    heroBackgroundVideo: Attribute.Media;
+    heroSection: Attribute.Component<'elements.info-card'>;
+    philosophy: Attribute.Component<'row.info-card-row'>;
+    vision: Attribute.Component<'row.info-card-row'>;
+    mission: Attribute.Component<'row.info-card-row'>;
+    value: Attribute.Component<'row.info-card-row'>;
+    identity: Attribute.Component<'row.info-card-row'>;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::better-the-best.better-the-best',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::better-the-best.better-the-best',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
 export interface ApiCaseStudyCaseStudy extends Schema.CollectionType {
   collectionName: 'case_studies';
   info: {
@@ -1256,6 +1295,7 @@ declare module '@strapi/types' {
       'plugin::users-permissions.permission': PluginUsersPermissionsPermission;
       'plugin::users-permissions.role': PluginUsersPermissionsRole;
       'plugin::users-permissions.user': PluginUsersPermissionsUser;
+      'api::better-the-best.better-the-best': ApiBetterTheBestBetterTheBest;
       'api::case-study.case-study': ApiCaseStudyCaseStudy;
       'api::case-study-content.case-study-content': ApiCaseStudyContentCaseStudyContent;
       'api::digital-enterprise.digital-enterprise': ApiDigitalEnterpriseDigitalEnterprise;
