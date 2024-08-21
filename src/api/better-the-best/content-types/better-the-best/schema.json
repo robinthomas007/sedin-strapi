@@ -55,11 +55,6 @@
       "repeatable": false,
       "component": "row.info-card-row"
     },
-    "value": {
-      "type": "component",
-      "repeatable": false,
-      "component": "row.card-row"
-    },
     "betterTheBestValue": {
       "type": "component",
       "repeatable": false,

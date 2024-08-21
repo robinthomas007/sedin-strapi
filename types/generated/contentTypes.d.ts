@@ -808,7 +808,6 @@ export interface ApiBetterTheBestBetterTheBest extends Schema.SingleType {
     vision: Attribute.Component<'row.info-card-row'>;
     mission: Attribute.Component<'row.info-card-row'>;
     identity: Attribute.Component<'row.info-card-row'>;
-    value: Attribute.Component<'row.card-row'>;
     betterTheBestValue: Attribute.Component<'row.card-row'>;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
