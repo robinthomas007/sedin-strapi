@@ -29,11 +29,13 @@
       "target": "api::hwb-child-category.hwb-child-category"
     },
     "backgroudImage": {
-      "allowedTypes": [
-        "images"
-      ],
       "type": "media",
-      "multiple": false
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "videos"
+      ]
     }
   }
 }
