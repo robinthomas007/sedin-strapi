@@ -1,0 +1,36 @@
+{
+  "kind": "singleType",
+  "collectionName": "how_we_betters",
+  "info": {
+    "singularName": "how-we-better",
+    "pluralName": "how-we-betters",
+    "displayName": "How we better",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "seo": {
+      "type": "component",
+      "repeatable": false,
+      "component": "seo.meta"
+    },
+    "hwbcards": {
+      "type": "component",
+      "repeatable": true,
+      "component": "hwb.hwb-cards"
+    },
+    "breadcrumbs": {
+      "type": "component",
+      "repeatable": false,
+      "component": "elements.link-list"
+    },
+    "headerSection": {
+      "type": "component",
+      "repeatable": false,
+      "component": "elements.card"
+    }
+  }
+}

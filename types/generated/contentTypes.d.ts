@@ -1211,6 +1211,107 @@ export interface ApiHomepageHomepage extends Schema.SingleType {
   };
 }
 
+export interface ApiHowWeBetterHowWeBetter extends Schema.SingleType {
+  collectionName: 'how_we_betters';
+  info: {
+    singularName: 'how-we-better';
+    pluralName: 'how-we-betters';
+    displayName: 'How we better';
+    description: '';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    seo: Attribute.Component<'seo.meta'>;
+    hwbcards: Attribute.Component<'hwb.hwb-cards', true>;
+    breadcrumbs: Attribute.Component<'elements.link-list'>;
+    headerSection: Attribute.Component<'elements.card'>;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::how-we-better.how-we-better',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::how-we-better.how-we-better',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
+export interface ApiHwbCategoryHwbCategory extends Schema.CollectionType {
+  collectionName: 'hwb_categories';
+  info: {
+    singularName: 'hwb-category';
+    pluralName: 'hwb-categories';
+    displayName: 'hwb category';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    title: Attribute.String;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::hwb-category.hwb-category',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::hwb-category.hwb-category',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
+export interface ApiHwbChildCategoryHwbChildCategory
+  extends Schema.CollectionType {
+  collectionName: 'hwb_child_categories';
+  info: {
+    singularName: 'hwb-child-category';
+    pluralName: 'hwb-child-categories';
+    displayName: 'hwb child category';
+    description: '';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    title: Attribute.String;
+    hwb_category: Attribute.Relation<
+      'api::hwb-child-category.hwb-child-category',
+      'oneToOne',
+      'api::hwb-category.hwb-category'
+    >;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::hwb-child-category.hwb-child-category',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::hwb-child-category.hwb-child-category',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
 export interface ApiNavContentNavContent extends Schema.CollectionType {
   collectionName: 'nav_contents';
   info: {
@@ -1305,6 +1406,9 @@ declare module '@strapi/types' {
       'api::footer.footer': ApiFooterFooter;
       'api::header.header': ApiHeaderHeader;
       'api::homepage.homepage': ApiHomepageHomepage;
+      'api::how-we-better.how-we-better': ApiHowWeBetterHowWeBetter;
+      'api::hwb-category.hwb-category': ApiHwbCategoryHwbCategory;
+      'api::hwb-child-category.hwb-child-category': ApiHwbChildCategoryHwbChildCategory;
       'api::nav-content.nav-content': ApiNavContentNavContent;
       'api::tab-content.tab-content': ApiTabContentTabContent;
     }

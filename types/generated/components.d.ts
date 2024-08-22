@@ -226,6 +226,27 @@ export interface ElementsTab extends Schema.Component {
   };
 }
 
+export interface HwbHwbCards extends Schema.Component {
+  collectionName: 'components_hwb_hwb_cards';
+  info: {
+    displayName: 'hwbCards';
+    description: '';
+  };
+  attributes: {
+    title: Attribute.String;
+    tag: Attribute.String;
+    titleMain: Attribute.String;
+    description: Attribute.Text;
+    button: Attribute.Component<'elements.button-link'>;
+    hwb_child_category: Attribute.Relation<
+      'hwb.hwb-cards',
+      'oneToOne',
+      'api::hwb-child-category.hwb-child-category'
+    >;
+    backgroudImage: Attribute.Media;
+  };
+}
+
 export interface RowCardRow extends Schema.Component {
   collectionName: 'components_row_card_rows';
   info: {
@@ -318,6 +339,7 @@ declare module '@strapi/types' {
       'elements.slider': ElementsSlider;
       'elements.statitics': ElementsStatitics;
       'elements.tab': ElementsTab;
+      'hwb.hwb-cards': HwbHwbCards;
       'row.card-row': RowCardRow;
       'row.faq-row': RowFaqRow;
       'row.image-card-wrapper': RowImageCardWrapper;

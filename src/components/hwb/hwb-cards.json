@@ -1,0 +1,39 @@
+{
+  "collectionName": "components_hwb_hwb_cards",
+  "info": {
+    "displayName": "hwbCards",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "tag": {
+      "type": "string"
+    },
+    "titleMain": {
+      "type": "string"
+    },
+    "description": {
+      "type": "text"
+    },
+    "button": {
+      "type": "component",
+      "repeatable": false,
+      "component": "elements.button-link"
+    },
+    "hwb_child_category": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::hwb-child-category.hwb-child-category"
+    },
+    "backgroudImage": {
+      "allowedTypes": [
+        "images"
+      ],
+      "type": "media",
+      "multiple": false
+    }
+  }
+}
