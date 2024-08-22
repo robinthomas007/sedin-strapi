@@ -12,10 +12,10 @@
     "tag": {
       "type": "string"
     },
-    "titleMain": {
+    "description": {
       "type": "string"
     },
-    "description": {
+    "description2": {
       "type": "text"
     },
     "cardbtn": {

@@ -235,8 +235,8 @@ export interface HwbHwbCards extends Schema.Component {
   attributes: {
     title: Attribute.String;
     tag: Attribute.String;
-    titleMain: Attribute.String;
-    description: Attribute.Text;
+    description: Attribute.String;
+    description2: Attribute.Text;
     cardbtn: Attribute.Component<'elements.button-link'>;
     hwb_child_category: Attribute.Relation<
       'hwb.hwb-cards',
