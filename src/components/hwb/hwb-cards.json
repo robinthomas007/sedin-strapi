@@ -18,7 +18,7 @@
     "description": {
       "type": "text"
     },
-    "button": {
+    "cardbtn": {
       "type": "component",
       "repeatable": false,
       "component": "elements.button-link"
@@ -28,7 +28,7 @@
       "relation": "oneToOne",
       "target": "api::hwb-child-category.hwb-child-category"
     },
-    "backgroudImage": {
+    "cardimg": {
       "type": "media",
       "multiple": false,
       "required": false,

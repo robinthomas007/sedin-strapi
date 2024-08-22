@@ -237,13 +237,13 @@ export interface HwbHwbCards extends Schema.Component {
     tag: Attribute.String;
     titleMain: Attribute.String;
     description: Attribute.Text;
-    button: Attribute.Component<'elements.button-link'>;
+    cardbtn: Attribute.Component<'elements.button-link'>;
     hwb_child_category: Attribute.Relation<
       'hwb.hwb-cards',
       'oneToOne',
       'api::hwb-child-category.hwb-child-category'
     >;
-    backgroudImage: Attribute.Media;
+    cardimg: Attribute.Media;
   };
 }
 
