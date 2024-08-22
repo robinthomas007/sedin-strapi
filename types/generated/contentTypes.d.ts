@@ -1225,7 +1225,7 @@ export interface ApiHowWeBetterHowWeBetter extends Schema.SingleType {
   attributes: {
     seo: Attribute.Component<'seo.meta'>;
     hwbcards: Attribute.Component<'hwb.hwb-cards', true>;
-    breadcrumbs: Attribute.Component<'elements.link-list'>;
+    breadcrumbs: Attribute.Component<'elements.link-list', true>;
     headerSection: Attribute.Component<'elements.card'>;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;

@@ -24,7 +24,7 @@
     },
     "breadcrumbs": {
       "type": "component",
-      "repeatable": false,
+      "repeatable": true,
       "component": "elements.link-list"
     },
     "headerSection": {
