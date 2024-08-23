@@ -17,6 +17,14 @@
     },
     "description": {
       "type": "text"
+    },
+    "background": {
+      "allowedTypes": [
+        "images",
+        "videos"
+      ],
+      "type": "media",
+      "multiple": false
     }
   }
 }
