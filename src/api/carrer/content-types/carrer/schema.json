@@ -29,7 +29,7 @@
     },
     "cultureimageslider": {
       "type": "component",
-      "repeatable": false,
+      "repeatable": true,
       "component": "elements.image-card"
     },
     "culturevideo": {

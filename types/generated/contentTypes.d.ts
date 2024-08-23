@@ -842,7 +842,7 @@ export interface ApiCarrerCarrer extends Schema.SingleType {
     seo: Attribute.Component<'seo.meta'>;
     breadcrumbs: Attribute.Component<'elements.link-list', true>;
     headerSection: Attribute.Component<'elements.card'>;
-    cultureimageslider: Attribute.Component<'elements.image-card'>;
+    cultureimageslider: Attribute.Component<'elements.image-card', true>;
     culturevideo: Attribute.Component<'elements.customer-stories'>;
     whatourbest: Attribute.Component<'row.card-row'>;
     job_listings: Attribute.Relation<
