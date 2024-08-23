@@ -1,0 +1,51 @@
+{
+  "kind": "singleType",
+  "collectionName": "carrers",
+  "info": {
+    "singularName": "carrer",
+    "pluralName": "carrers",
+    "displayName": "Carrer",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "seo": {
+      "type": "component",
+      "repeatable": false,
+      "component": "seo.meta"
+    },
+    "breadcrumbs": {
+      "type": "component",
+      "repeatable": true,
+      "component": "elements.link-list"
+    },
+    "headerSection": {
+      "type": "component",
+      "repeatable": false,
+      "component": "elements.card"
+    },
+    "cultureimageslider": {
+      "type": "component",
+      "repeatable": false,
+      "component": "elements.image-card"
+    },
+    "culturevideo": {
+      "type": "component",
+      "repeatable": false,
+      "component": "elements.customer-stories"
+    },
+    "whatourbest": {
+      "type": "component",
+      "repeatable": false,
+      "component": "row.card-row"
+    },
+    "job_listings": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::job-listing.job-listing"
+    }
+  }
+}

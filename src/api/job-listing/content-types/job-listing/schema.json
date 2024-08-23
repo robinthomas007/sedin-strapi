@@ -1,0 +1,24 @@
+{
+  "kind": "collectionType",
+  "collectionName": "job_listings",
+  "info": {
+    "singularName": "job-listing",
+    "pluralName": "job-listings",
+    "displayName": "job Listing",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "jobCards": {
+      "type": "component",
+      "repeatable": true,
+      "component": "carrer.carrer"
+    }
+  }
+}

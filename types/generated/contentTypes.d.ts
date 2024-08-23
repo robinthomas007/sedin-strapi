@@ -827,6 +827,47 @@ export interface ApiBetterTheBestBetterTheBest extends Schema.SingleType {
   };
 }
 
+export interface ApiCarrerCarrer extends Schema.SingleType {
+  collectionName: 'carrers';
+  info: {
+    singularName: 'carrer';
+    pluralName: 'carrers';
+    displayName: 'Carrer';
+    description: '';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    seo: Attribute.Component<'seo.meta'>;
+    breadcrumbs: Attribute.Component<'elements.link-list', true>;
+    headerSection: Attribute.Component<'elements.card'>;
+    cultureimageslider: Attribute.Component<'elements.image-card'>;
+    culturevideo: Attribute.Component<'elements.customer-stories'>;
+    whatourbest: Attribute.Component<'row.card-row'>;
+    job_listings: Attribute.Relation<
+      'api::carrer.carrer',
+      'oneToMany',
+      'api::job-listing.job-listing'
+    >;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::carrer.carrer',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::carrer.carrer',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
 export interface ApiCaseStudyCaseStudy extends Schema.CollectionType {
   collectionName: 'case_studies';
   info: {
@@ -903,6 +944,37 @@ export interface ApiCaseStudyContentCaseStudyContent
       Attribute.Private;
     updatedBy: Attribute.Relation<
       'api::case-study-content.case-study-content',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
+export interface ApiDepartmentDepartment extends Schema.CollectionType {
+  collectionName: 'departments';
+  info: {
+    singularName: 'department';
+    pluralName: 'departments';
+    displayName: 'department';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    name: Attribute.String;
+    dptId: Attribute.UID<'api::department.department', 'name'>;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::department.department',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::department.department',
       'oneToOne',
       'admin::user'
     > &
@@ -1312,6 +1384,69 @@ export interface ApiHwbChildCategoryHwbChildCategory
   };
 }
 
+export interface ApiJobListingJobListing extends Schema.CollectionType {
+  collectionName: 'job_listings';
+  info: {
+    singularName: 'job-listing';
+    pluralName: 'job-listings';
+    displayName: 'job Listing';
+    description: '';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    title: Attribute.String;
+    jobCards: Attribute.Component<'carrer.carrer', true>;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::job-listing.job-listing',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::job-listing.job-listing',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
+export interface ApiLocationLocation extends Schema.CollectionType {
+  collectionName: 'locations';
+  info: {
+    singularName: 'location';
+    pluralName: 'locations';
+    displayName: 'Location';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    name: Attribute.String;
+    ltnId: Attribute.UID;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::location.location',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::location.location',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
 export interface ApiNavContentNavContent extends Schema.CollectionType {
   collectionName: 'nav_contents';
   info: {
@@ -1397,8 +1532,10 @@ declare module '@strapi/types' {
       'plugin::users-permissions.role': PluginUsersPermissionsRole;
       'plugin::users-permissions.user': PluginUsersPermissionsUser;
       'api::better-the-best.better-the-best': ApiBetterTheBestBetterTheBest;
+      'api::carrer.carrer': ApiCarrerCarrer;
       'api::case-study.case-study': ApiCaseStudyCaseStudy;
       'api::case-study-content.case-study-content': ApiCaseStudyContentCaseStudyContent;
+      'api::department.department': ApiDepartmentDepartment;
       'api::digital-enterprise.digital-enterprise': ApiDigitalEnterpriseDigitalEnterprise;
       'api::digital-enterprise-overview.digital-enterprise-overview': ApiDigitalEnterpriseOverviewDigitalEnterpriseOverview;
       'api::digital-service.digital-service': ApiDigitalServiceDigitalService;
@@ -1409,6 +1546,8 @@ declare module '@strapi/types' {
       'api::how-we-better.how-we-better': ApiHowWeBetterHowWeBetter;
       'api::hwb-category.hwb-category': ApiHwbCategoryHwbCategory;
       'api::hwb-child-category.hwb-child-category': ApiHwbChildCategoryHwbChildCategory;
+      'api::job-listing.job-listing': ApiJobListingJobListing;
+      'api::location.location': ApiLocationLocation;
       'api::nav-content.nav-content': ApiNavContentNavContent;
       'api::tab-content.tab-content': ApiTabContentTabContent;
     }

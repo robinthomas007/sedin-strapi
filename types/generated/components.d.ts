@@ -1,5 +1,28 @@
 import type { Schema, Attribute } from '@strapi/strapi';
 
+export interface CarrerCarrer extends Schema.Component {
+  collectionName: 'components_carrer_carrers';
+  info: {
+    displayName: 'Carrer';
+  };
+  attributes: {
+    department: Attribute.Relation<
+      'carrer.carrer',
+      'oneToOne',
+      'api::department.department'
+    >;
+    isRemote: Attribute.Boolean;
+    jobTitle: Attribute.String;
+    description: Attribute.Text;
+    locations: Attribute.Relation<
+      'carrer.carrer',
+      'oneToMany',
+      'api::location.location'
+    >;
+    button: Attribute.Component<'elements.button-link'>;
+  };
+}
+
 export interface CaseStudyCaseStudiesCard extends Schema.Component {
   collectionName: 'components_case_study_case_studies_cards';
   info: {
@@ -248,6 +271,29 @@ export interface HwbHwbCards extends Schema.Component {
   };
 }
 
+export interface JobCardsCarrer extends Schema.Component {
+  collectionName: 'components_job_cards_carrers';
+  info: {
+    displayName: 'Carrer';
+  };
+  attributes: {
+    department: Attribute.Relation<
+      'job-cards.carrer',
+      'oneToOne',
+      'api::department.department'
+    >;
+    isRemote: Attribute.Boolean;
+    jobTitle: Attribute.String;
+    description: Attribute.Text;
+    locations: Attribute.Relation<
+      'job-cards.carrer',
+      'oneToMany',
+      'api::location.location'
+    >;
+    button: Attribute.Component<'elements.button-link'>;
+  };
+}
+
 export interface RowCardRow extends Schema.Component {
   collectionName: 'components_row_card_rows';
   info: {
@@ -323,6 +369,7 @@ export interface SeoMeta extends Schema.Component {
 declare module '@strapi/types' {
   export module Shared {
     export interface Components {
+      'carrer.carrer': CarrerCarrer;
       'case-study.case-studies-card': CaseStudyCaseStudiesCard;
       'case-study.case-study-intro': CaseStudyCaseStudyIntro;
       'contact-block.contact-us-block': ContactBlockContactUsBlock;
@@ -341,6 +388,7 @@ declare module '@strapi/types' {
       'elements.statitics': ElementsStatitics;
       'elements.tab': ElementsTab;
       'hwb.hwb-cards': HwbHwbCards;
+      'job-cards.carrer': JobCardsCarrer;
       'row.card-row': RowCardRow;
       'row.faq-row': RowFaqRow;
       'row.image-card-wrapper': RowImageCardWrapper;
