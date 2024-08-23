@@ -21,6 +21,14 @@
         "images",
         "videos"
       ]
+    },
+    "background": {
+      "allowedTypes": [
+        "images",
+        "videos"
+      ],
+      "type": "media",
+      "multiple": false
     }
   }
 }
