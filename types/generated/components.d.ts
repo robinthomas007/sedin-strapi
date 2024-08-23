@@ -139,6 +139,7 @@ export interface ElementsInfoCard extends Schema.Component {
     title: Attribute.String & Attribute.Required;
     description: Attribute.Text;
     image: Attribute.Media;
+    background: Attribute.Media;
   };
 }
 
