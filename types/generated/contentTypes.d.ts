@@ -803,12 +803,12 @@ export interface ApiBetterTheBestBetterTheBest extends Schema.SingleType {
     seo: Attribute.Component<'seo.meta'>;
     breadcrumbs: Attribute.Component<'elements.link-list', true>;
     heroBackgroundVideo: Attribute.Media;
-    heroSection: Attribute.Component<'elements.info-card'>;
     philosophy: Attribute.Component<'row.info-card-row'>;
     vision: Attribute.Component<'row.info-card-row'>;
     mission: Attribute.Component<'row.info-card-row'>;
     identity: Attribute.Component<'row.info-card-row'>;
     betterTheBestValue: Attribute.Component<'row.card-row'>;
+    heroSection: Attribute.Component<'elements.customer-stories'>;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
