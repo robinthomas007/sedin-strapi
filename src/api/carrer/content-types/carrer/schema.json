@@ -4,7 +4,7 @@
   "info": {
     "singularName": "carrer",
     "pluralName": "carrers",
-    "displayName": "Carrer",
+    "displayName": "Career",
     "description": ""
   },
   "options": {
@@ -46,6 +46,11 @@
       "type": "relation",
       "relation": "oneToMany",
       "target": "api::job-listing.job-listing"
+    },
+    "review": {
+      "type": "component",
+      "repeatable": false,
+      "component": "carrer.review"
     }
   }
 }

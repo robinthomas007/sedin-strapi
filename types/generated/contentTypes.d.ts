@@ -832,7 +832,7 @@ export interface ApiCarrerCarrer extends Schema.SingleType {
   info: {
     singularName: 'carrer';
     pluralName: 'carrers';
-    displayName: 'Carrer';
+    displayName: 'Career';
     description: '';
   };
   options: {
@@ -850,6 +850,7 @@ export interface ApiCarrerCarrer extends Schema.SingleType {
       'oneToMany',
       'api::job-listing.job-listing'
     >;
+    review: Attribute.Component<'carrer.review'>;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
