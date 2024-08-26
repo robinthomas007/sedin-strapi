@@ -19,6 +19,21 @@
       "type": "component",
       "repeatable": true,
       "component": "carrer.carrer"
+    },
+    "title2": {
+      "type": "string"
+    },
+    "OptionTitle": {
+      "type": "string"
+    },
+    "OptionTitle2": {
+      "type": "string"
+    },
+    "OptionTitle3": {
+      "type": "string"
+    },
+    "SearchTitle": {
+      "type": "string"
     }
   }
 }

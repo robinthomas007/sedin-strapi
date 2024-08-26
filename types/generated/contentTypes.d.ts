@@ -1399,6 +1399,11 @@ export interface ApiJobListingJobListing extends Schema.CollectionType {
   attributes: {
     title: Attribute.String;
     jobCards: Attribute.Component<'carrer.carrer', true>;
+    title2: Attribute.String;
+    OptionTitle: Attribute.String;
+    OptionTitle2: Attribute.String;
+    OptionTitle3: Attribute.String;
+    SearchTitle: Attribute.String;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
