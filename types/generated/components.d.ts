@@ -330,10 +330,12 @@ export interface KubLeadershipCards extends Schema.Component {
   collectionName: 'components_kub_leadership_cards';
   info: {
     displayName: 'leadershipCards';
+    description: '';
   };
   attributes: {
     title: Attribute.String;
     cards: Attribute.Component<'elements.info-card', true>;
+    backgroundImg: Attribute.Media;
   };
 }
 
