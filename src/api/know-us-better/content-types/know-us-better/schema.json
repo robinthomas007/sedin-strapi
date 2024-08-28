@@ -67,11 +67,6 @@
       "repeatable": false,
       "component": "kub.betterforeveyone"
     },
-    "journeyimageslider": {
-      "type": "component",
-      "repeatable": true,
-      "component": "row.info-card-row"
-    },
     "highlights": {
       "type": "component",
       "repeatable": false,
@@ -79,7 +74,12 @@
     },
     "partners": {
       "type": "component",
-      "repeatable": true,
+      "repeatable": false,
+      "component": "row.card-row"
+    },
+    "journeyimageslider": {
+      "type": "component",
+      "repeatable": false,
       "component": "row.card-row"
     }
   }

@@ -1445,9 +1445,9 @@ export interface ApiKnowUsBetterKnowUsBetter extends Schema.SingleType {
     learningcare: Attribute.Component<'row.image-card-wrapper'>;
     ecosystemslider: Attribute.Component<'row.card-row'>;
     betterforeveryone: Attribute.Component<'kub.betterforeveyone'>;
-    journeyimageslider: Attribute.Component<'row.info-card-row', true>;
     highlights: Attribute.Component<'row.card-row'>;
-    partners: Attribute.Component<'row.card-row', true>;
+    partners: Attribute.Component<'row.card-row'>;
+    journeyimageslider: Attribute.Component<'row.card-row'>;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
