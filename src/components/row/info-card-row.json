@@ -10,21 +10,17 @@
       "type": "string",
       "required": true
     },
-    "infoCard": {
-      "type": "component",
-      "repeatable": true,
-      "component": "elements.info-card"
-    },
     "description": {
       "type": "text"
     },
     "background": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
       "allowedTypes": [
         "images",
         "videos"
-      ],
-      "type": "media",
-      "multiple": false
+      ]
     }
   }
 }
