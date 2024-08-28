@@ -42,11 +42,6 @@
       "repeatable": true,
       "component": "row.info-card-row"
     },
-    "journeyimageslider": {
-      "type": "component",
-      "repeatable": true,
-      "component": "elements.image-card"
-    },
     "leadership": {
       "type": "component",
       "repeatable": false,
@@ -76,6 +71,11 @@
       "type": "component",
       "repeatable": false,
       "component": "kub.betterforeveyone"
+    },
+    "journeyimageslider": {
+      "type": "component",
+      "repeatable": true,
+      "component": "row.info-card-row"
     }
   }
 }

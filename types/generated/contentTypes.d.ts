@@ -1440,13 +1440,13 @@ export interface ApiKnowUsBetterKnowUsBetter extends Schema.SingleType {
     storyimageslider: Attribute.Component<'elements.image-card', true>;
     storyvideo: Attribute.Component<'elements.customer-stories'>;
     partners: Attribute.Component<'row.info-card-row', true>;
-    journeyimageslider: Attribute.Component<'elements.image-card', true>;
     leadership: Attribute.Component<'kub.leadership-cards'>;
     displayinfocard: Attribute.Component<'elements.card', true>;
     advisor: Attribute.Component<'kub.kub-cards'>;
     imagetext: Attribute.Component<'row.image-card-wrapper', true>;
     ecosystemslider: Attribute.Component<'row.card-row'>;
     betterforeveryone: Attribute.Component<'kub.betterforeveyone'>;
+    journeyimageslider: Attribute.Component<'row.info-card-row', true>;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
