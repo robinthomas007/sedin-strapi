@@ -1,7 +1,8 @@
 {
   "collectionName": "components_elements_image_cards",
   "info": {
-    "displayName": "Image Card"
+    "displayName": "Image Card",
+    "description": ""
   },
   "options": {},
   "attributes": {
@@ -10,12 +11,15 @@
       "required": true
     },
     "image": {
-      "allowedTypes": [
-        "images"
-      ],
       "type": "media",
       "multiple": false,
-      "required": true
+      "required": true,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "mainTitle": {
+      "type": "string"
     }
   }
 }

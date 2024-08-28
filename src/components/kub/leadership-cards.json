@@ -1,0 +1,17 @@
+{
+  "collectionName": "components_kub_leadership_cards",
+  "info": {
+    "displayName": "leadershipCards"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "cards": {
+      "type": "component",
+      "repeatable": true,
+      "component": "elements.info-card"
+    }
+  }
+}

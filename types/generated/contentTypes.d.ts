@@ -1422,6 +1422,49 @@ export interface ApiJobListingJobListing extends Schema.CollectionType {
   };
 }
 
+export interface ApiKnowUsBetterKnowUsBetter extends Schema.SingleType {
+  collectionName: 'know_us_betters';
+  info: {
+    singularName: 'know-us-better';
+    pluralName: 'know-us-betters';
+    displayName: 'Know Us Better';
+    description: '';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    seo: Attribute.Component<'seo.meta'>;
+    breadcrumbs: Attribute.Component<'elements.link-list', true>;
+    headerSection: Attribute.Component<'elements.card'>;
+    storyimageslider: Attribute.Component<'elements.image-card', true>;
+    storyvideo: Attribute.Component<'elements.customer-stories'>;
+    partners: Attribute.Component<'row.info-card-row', true>;
+    journeyimageslider: Attribute.Component<'elements.image-card', true>;
+    leadership: Attribute.Component<'kub.leadership-cards'>;
+    displayinfocard: Attribute.Component<'elements.card', true>;
+    advisor: Attribute.Component<'kub.kub-cards'>;
+    imagetext: Attribute.Component<'row.image-card-wrapper', true>;
+    ecosystemslider: Attribute.Component<'row.card-row'>;
+    betterforeveryone: Attribute.Component<'kub.betterforeveyone'>;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::know-us-better.know-us-better',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::know-us-better.know-us-better',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
 export interface ApiLocationLocation extends Schema.CollectionType {
   collectionName: 'locations';
   info: {
@@ -1553,6 +1596,7 @@ declare module '@strapi/types' {
       'api::hwb-category.hwb-category': ApiHwbCategoryHwbCategory;
       'api::hwb-child-category.hwb-child-category': ApiHwbChildCategoryHwbChildCategory;
       'api::job-listing.job-listing': ApiJobListingJobListing;
+      'api::know-us-better.know-us-better': ApiKnowUsBetterKnowUsBetter;
       'api::location.location': ApiLocationLocation;
       'api::nav-content.nav-content': ApiNavContentNavContent;
       'api::tab-content.tab-content': ApiTabContentTabContent;

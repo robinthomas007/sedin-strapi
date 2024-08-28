@@ -140,6 +140,7 @@ export interface ElementsCustomerStories extends Schema.Component {
     title: Attribute.String & Attribute.Required;
     url: Attribute.String & Attribute.Required;
     button: Attribute.Component<'elements.button-link'>;
+    mainTitle: Attribute.String;
   };
 }
 
@@ -158,10 +159,12 @@ export interface ElementsImageCard extends Schema.Component {
   collectionName: 'components_elements_image_cards';
   info: {
     displayName: 'Image Card';
+    description: '';
   };
   attributes: {
     title: Attribute.String & Attribute.Required;
     image: Attribute.Media & Attribute.Required;
+    mainTitle: Attribute.String;
   };
 }
 
@@ -284,6 +287,56 @@ export interface HwbHwbCards extends Schema.Component {
   };
 }
 
+export interface KubBetterforeveyone extends Schema.Component {
+  collectionName: 'components_kub_betterforeveyones';
+  info: {
+    displayName: 'Better For Eveyone';
+    description: '';
+  };
+  attributes: {
+    title: Attribute.String;
+    mainTitle: Attribute.String;
+    mainCard: Attribute.Component<'elements.card'>;
+    subCards: Attribute.Component<'elements.info-card', true>;
+  };
+}
+
+export interface KubDescriptionlist extends Schema.Component {
+  collectionName: 'components_kub_descriptionlists';
+  info: {
+    displayName: 'descriptionlist';
+  };
+  attributes: {
+    description2: Attribute.Text;
+  };
+}
+
+export interface KubKubCards extends Schema.Component {
+  collectionName: 'components_kub_kub_cards';
+  info: {
+    displayName: 'advisor Card';
+    description: '';
+  };
+  attributes: {
+    title: Attribute.String;
+    description: Attribute.Text;
+    cardImg: Attribute.Media;
+    descriptionList: Attribute.Component<'kub.descriptionlist', true>;
+    icon: Attribute.Media;
+  };
+}
+
+export interface KubLeadershipCards extends Schema.Component {
+  collectionName: 'components_kub_leadership_cards';
+  info: {
+    displayName: 'leadershipCards';
+  };
+  attributes: {
+    title: Attribute.String;
+    cards: Attribute.Component<'elements.info-card', true>;
+  };
+}
+
 export interface RowCardRow extends Schema.Component {
   collectionName: 'components_row_card_rows';
   info: {
@@ -380,6 +433,10 @@ declare module '@strapi/types' {
       'elements.statitics': ElementsStatitics;
       'elements.tab': ElementsTab;
       'hwb.hwb-cards': HwbHwbCards;
+      'kub.betterforeveyone': KubBetterforeveyone;
+      'kub.descriptionlist': KubDescriptionlist;
+      'kub.kub-cards': KubKubCards;
+      'kub.leadership-cards': KubLeadershipCards;
       'row.card-row': RowCardRow;
       'row.faq-row': RowFaqRow;
       'row.image-card-wrapper': RowImageCardWrapper;

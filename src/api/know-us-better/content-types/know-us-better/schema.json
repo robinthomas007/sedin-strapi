@@ -1,0 +1,81 @@
+{
+  "kind": "singleType",
+  "collectionName": "know_us_betters",
+  "info": {
+    "singularName": "know-us-better",
+    "pluralName": "know-us-betters",
+    "displayName": "Know Us Better",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "seo": {
+      "type": "component",
+      "repeatable": false,
+      "component": "seo.meta"
+    },
+    "breadcrumbs": {
+      "type": "component",
+      "repeatable": true,
+      "component": "elements.link-list"
+    },
+    "headerSection": {
+      "type": "component",
+      "repeatable": false,
+      "component": "elements.card"
+    },
+    "storyimageslider": {
+      "type": "component",
+      "repeatable": true,
+      "component": "elements.image-card"
+    },
+    "storyvideo": {
+      "type": "component",
+      "repeatable": false,
+      "component": "elements.customer-stories"
+    },
+    "partners": {
+      "type": "component",
+      "repeatable": true,
+      "component": "row.info-card-row"
+    },
+    "journeyimageslider": {
+      "type": "component",
+      "repeatable": true,
+      "component": "elements.image-card"
+    },
+    "leadership": {
+      "type": "component",
+      "repeatable": false,
+      "component": "kub.leadership-cards"
+    },
+    "displayinfocard": {
+      "type": "component",
+      "repeatable": true,
+      "component": "elements.card"
+    },
+    "advisor": {
+      "type": "component",
+      "repeatable": false,
+      "component": "kub.kub-cards"
+    },
+    "imagetext": {
+      "type": "component",
+      "repeatable": true,
+      "component": "row.image-card-wrapper"
+    },
+    "ecosystemslider": {
+      "type": "component",
+      "repeatable": false,
+      "component": "row.card-row"
+    },
+    "betterforeveryone": {
+      "type": "component",
+      "repeatable": false,
+      "component": "kub.betterforeveyone"
+    }
+  }
+}

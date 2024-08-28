@@ -1,0 +1,26 @@
+{
+  "collectionName": "components_kub_betterforeveyones",
+  "info": {
+    "displayName": "Better For Eveyone",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "mainTitle": {
+      "type": "string"
+    },
+     "mainCard": {
+      "type": "component",
+      "repeatable": false,
+      "component": "elements.card"
+    },
+    "subCards": {
+      "type": "component",
+      "repeatable": true,
+      "component": "elements.info-card"
+    }
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "collectionName": "components_kub_descriptionlists",
+  "info": {
+    "displayName": "descriptionlist"
+  },
+  "options": {},
+  "attributes": {
+    "description2": {
+      "type": "text"
+    }
+  }
+}
