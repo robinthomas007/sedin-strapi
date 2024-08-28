@@ -1439,7 +1439,6 @@ export interface ApiKnowUsBetterKnowUsBetter extends Schema.SingleType {
     headerSection: Attribute.Component<'elements.card'>;
     storyimageslider: Attribute.Component<'elements.image-card', true>;
     storyvideo: Attribute.Component<'elements.customer-stories'>;
-    partners: Attribute.Component<'row.info-card-row', true>;
     leadership: Attribute.Component<'kub.leadership-cards'>;
     displayinfocard: Attribute.Component<'elements.card', true>;
     advisor: Attribute.Component<'kub.kub-cards'>;
@@ -1448,6 +1447,7 @@ export interface ApiKnowUsBetterKnowUsBetter extends Schema.SingleType {
     betterforeveryone: Attribute.Component<'kub.betterforeveyone'>;
     journeyimageslider: Attribute.Component<'row.info-card-row', true>;
     highlights: Attribute.Component<'row.card-row'>;
+    partners: Attribute.Component<'row.card-row', true>;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;

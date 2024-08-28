@@ -37,11 +37,6 @@
       "repeatable": false,
       "component": "elements.customer-stories"
     },
-    "partners": {
-      "type": "component",
-      "repeatable": true,
-      "component": "row.info-card-row"
-    },
     "leadership": {
       "type": "component",
       "repeatable": false,
@@ -80,6 +75,11 @@
     "highlights": {
       "type": "component",
       "repeatable": false,
+      "component": "row.card-row"
+    },
+    "partners": {
+      "type": "component",
+      "repeatable": true,
       "component": "row.card-row"
     }
   }
