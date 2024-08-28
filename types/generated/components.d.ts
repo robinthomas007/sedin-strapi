@@ -164,7 +164,6 @@ export interface ElementsImageCard extends Schema.Component {
   attributes: {
     title: Attribute.String & Attribute.Required;
     image: Attribute.Media & Attribute.Required;
-    mainTitle: Attribute.String;
   };
 }
 
