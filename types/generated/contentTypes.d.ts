@@ -1443,7 +1443,7 @@ export interface ApiKnowUsBetterKnowUsBetter extends Schema.SingleType {
     leadership: Attribute.Component<'kub.leadership-cards'>;
     displayinfocard: Attribute.Component<'elements.card', true>;
     advisor: Attribute.Component<'kub.kub-cards'>;
-    imagetext: Attribute.Component<'row.image-card-wrapper', true>;
+    learningcare: Attribute.Component<'row.image-card-wrapper'>;
     ecosystemslider: Attribute.Component<'row.card-row'>;
     betterforeveryone: Attribute.Component<'kub.betterforeveyone'>;
     journeyimageslider: Attribute.Component<'row.info-card-row', true>;

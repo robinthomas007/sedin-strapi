@@ -1,7 +1,8 @@
 {
   "collectionName": "components_row_image_card_wrappers",
   "info": {
-    "displayName": "image card wrapper"
+    "displayName": "image card wrapper",
+    "description": ""
   },
   "options": {},
   "attributes": {
@@ -9,10 +10,10 @@
       "type": "string",
       "required": true
     },
-    "imageCard": {
+    "imagecard": {
       "type": "component",
       "repeatable": true,
-      "component": "elements.image-card"
+      "component": "elements.info-card"
     }
   }
 }

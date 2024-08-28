@@ -57,9 +57,9 @@
       "repeatable": false,
       "component": "kub.kub-cards"
     },
-    "imagetext": {
+    "learningcare": {
       "type": "component",
-      "repeatable": true,
+      "repeatable": false,
       "component": "row.image-card-wrapper"
     },
     "ecosystemslider": {

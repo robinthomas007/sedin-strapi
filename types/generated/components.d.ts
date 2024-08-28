@@ -366,10 +366,11 @@ export interface RowImageCardWrapper extends Schema.Component {
   collectionName: 'components_row_image_card_wrappers';
   info: {
     displayName: 'image card wrapper';
+    description: '';
   };
   attributes: {
     title: Attribute.String & Attribute.Required;
-    imageCard: Attribute.Component<'elements.image-card', true>;
+    imagecard: Attribute.Component<'elements.info-card', true>;
   };
 }
 
