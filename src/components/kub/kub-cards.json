@@ -38,6 +38,9 @@
         "videos",
         "audios"
       ]
+    },
+    "mainTitle": {
+      "type": "string"
     }
   }
 }

@@ -322,6 +322,7 @@ export interface KubKubCards extends Schema.Component {
     cardImg: Attribute.Media;
     descriptionList: Attribute.Component<'kub.descriptionlist', true>;
     icon: Attribute.Media;
+    mainTitle: Attribute.String;
   };
 }
 
