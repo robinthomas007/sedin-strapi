@@ -52,11 +52,6 @@
       "repeatable": false,
       "component": "kub.kub-cards"
     },
-    "learningcare": {
-      "type": "component",
-      "repeatable": false,
-      "component": "row.image-card-wrapper"
-    },
     "ecosystemslider": {
       "type": "component",
       "repeatable": false,
@@ -78,6 +73,11 @@
       "component": "row.card-row"
     },
     "journeyimageslider": {
+      "type": "component",
+      "repeatable": false,
+      "component": "row.card-row"
+    },
+    "learningcare": {
       "type": "component",
       "repeatable": false,
       "component": "row.card-row"
