@@ -21,6 +21,11 @@
         "images",
         "videos"
       ]
+    },
+    "infoCard": {
+      "type": "component",
+      "repeatable": true,
+      "component": "elements.info-card"
     }
   }
 }
