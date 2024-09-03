@@ -83,6 +83,7 @@ export interface CsrCsr extends Schema.Component {
   attributes: {
     maintitle: Attribute.String;
     cards: Attribute.Component<'row.card-row'>;
+    tag: Attribute.String;
   };
 }
 
