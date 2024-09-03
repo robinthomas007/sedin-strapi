@@ -952,6 +952,32 @@ export interface ApiCaseStudyContentCaseStudyContent
   };
 }
 
+export interface ApiCsrCsr extends Schema.SingleType {
+  collectionName: 'csrs';
+  info: {
+    singularName: 'csr';
+    pluralName: 'csrs';
+    displayName: 'CSR';
+    description: '';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    seo: Attribute.Component<'seo.meta'>;
+    breadcrumbs: Attribute.Component<'elements.link-list', true>;
+    headerSection: Attribute.Component<'elements.card'>;
+    csrcards: Attribute.Component<'row.card-row'>;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<'api::csr.csr', 'oneToOne', 'admin::user'> &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<'api::csr.csr', 'oneToOne', 'admin::user'> &
+      Attribute.Private;
+  };
+}
+
 export interface ApiDepartmentDepartment extends Schema.CollectionType {
   collectionName: 'departments';
   info: {
@@ -1585,6 +1611,7 @@ declare module '@strapi/types' {
       'api::carrer.carrer': ApiCarrerCarrer;
       'api::case-study.case-study': ApiCaseStudyCaseStudy;
       'api::case-study-content.case-study-content': ApiCaseStudyContentCaseStudyContent;
+      'api::csr.csr': ApiCsrCsr;
       'api::department.department': ApiDepartmentDepartment;
       'api::digital-enterprise.digital-enterprise': ApiDigitalEnterpriseDigitalEnterprise;
       'api::digital-enterprise-overview.digital-enterprise-overview': ApiDigitalEnterpriseOverviewDigitalEnterpriseOverview;
