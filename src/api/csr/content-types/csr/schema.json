@@ -30,7 +30,7 @@
     "csrcards": {
       "type": "component",
       "repeatable": false,
-      "component": "row.card-row"
+      "component": "csr.csr"
     }
   }
 }

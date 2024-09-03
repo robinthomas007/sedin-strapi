@@ -967,7 +967,7 @@ export interface ApiCsrCsr extends Schema.SingleType {
     seo: Attribute.Component<'seo.meta'>;
     breadcrumbs: Attribute.Component<'elements.link-list', true>;
     headerSection: Attribute.Component<'elements.card'>;
-    csrcards: Attribute.Component<'row.card-row'>;
+    csrcards: Attribute.Component<'csr.csr'>;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;

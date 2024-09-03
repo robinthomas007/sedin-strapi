@@ -75,6 +75,17 @@ export interface ContactBlockContactUsBlock extends Schema.Component {
   };
 }
 
+export interface CsrCsr extends Schema.Component {
+  collectionName: 'components_csr_csrs';
+  info: {
+    displayName: 'CSR';
+  };
+  attributes: {
+    maintitle: Attribute.String;
+    cards: Attribute.Component<'row.card-row'>;
+  };
+}
+
 export interface DigitalServiceDigitalServiceList extends Schema.Component {
   collectionName: 'components_digital_service_lists';
   info: {
@@ -421,6 +432,7 @@ declare module '@strapi/types' {
       'case-study.case-studies-card': CaseStudyCaseStudiesCard;
       'case-study.case-study-intro': CaseStudyCaseStudyIntro;
       'contact-block.contact-us-block': ContactBlockContactUsBlock;
+      'csr.csr': CsrCsr;
       'digital-service.digital-service-list': DigitalServiceDigitalServiceList;
       'digital-service.digital-service': DigitalServiceDigitalService;
       'elements.button-link': ElementsButtonLink;
