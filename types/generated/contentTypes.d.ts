@@ -1050,6 +1050,50 @@ export interface ApiDepartmentDepartment extends Schema.CollectionType {
   };
 }
 
+export interface ApiDigitalCommerceOverviewDigitalCommerceOverview
+  extends Schema.SingleType {
+  collectionName: 'digital_commerce_overviews';
+  info: {
+    singularName: 'digital-commerce-overview';
+    pluralName: 'digital-commerce-overviews';
+    displayName: 'digital commerce overview';
+    description: '';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    seo: Attribute.Component<'seo.meta'>;
+    breadcrumbs: Attribute.Component<'elements.link-list', true>;
+    headerSection: Attribute.Component<'elements.card'>;
+    intro_section: Attribute.Component<'row.card-row'>;
+    introSectionTwo: Attribute.Component<'row.card-row'>;
+    clients: Attribute.Component<'elements.list', true>;
+    digitalservices: Attribute.Component<'digital-service.digital-service-list'>;
+    statitics: Attribute.Component<'elements.statitics', true>;
+    reachOut: Attribute.Component<'elements.card'>;
+    caseStudy: Attribute.Component<'row.card-row'>;
+    customerStory: Attribute.Component<'elements.customer-stories'>;
+    howWeBuilt: Attribute.Component<'elements.customer-stories'>;
+    IntroSlider: Attribute.Component<'row.info-card-row'>;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::digital-commerce-overview.digital-commerce-overview',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::digital-commerce-overview.digital-commerce-overview',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
 export interface ApiDigitalEnterpriseDigitalEnterprise
   extends Schema.CollectionType {
   collectionName: 'digital_enterprises';
@@ -1656,6 +1700,7 @@ declare module '@strapi/types' {
       'api::csr.csr': ApiCsrCsr;
       'api::csr-list.csr-list': ApiCsrListCsrList;
       'api::department.department': ApiDepartmentDepartment;
+      'api::digital-commerce-overview.digital-commerce-overview': ApiDigitalCommerceOverviewDigitalCommerceOverview;
       'api::digital-enterprise.digital-enterprise': ApiDigitalEnterpriseDigitalEnterprise;
       'api::digital-enterprise-overview.digital-enterprise-overview': ApiDigitalEnterpriseOverviewDigitalEnterpriseOverview;
       'api::digital-service.digital-service': ApiDigitalServiceDigitalService;

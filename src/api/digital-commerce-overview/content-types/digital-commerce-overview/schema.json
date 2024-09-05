@@ -1,0 +1,81 @@
+{
+  "kind": "singleType",
+  "collectionName": "digital_commerce_overviews",
+  "info": {
+    "singularName": "digital-commerce-overview",
+    "pluralName": "digital-commerce-overviews",
+    "displayName": "digital commerce overview",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "seo": {
+      "type": "component",
+      "repeatable": false,
+      "component": "seo.meta"
+    },
+    "breadcrumbs": {
+      "type": "component",
+      "repeatable": true,
+      "component": "elements.link-list"
+    },
+    "headerSection": {
+      "type": "component",
+      "repeatable": false,
+      "component": "elements.card"
+    },
+    "intro_section": {
+      "type": "component",
+      "repeatable": false,
+      "component": "row.card-row"
+    },
+    "introSectionTwo": {
+      "type": "component",
+      "repeatable": false,
+      "component": "row.card-row"
+    },
+    "clients": {
+      "type": "component",
+      "repeatable": true,
+      "component": "elements.list"
+    },
+    "digitalservices": {
+      "type": "component",
+      "repeatable": false,
+      "component": "digital-service.digital-service-list"
+    },
+    "statitics": {
+      "type": "component",
+      "repeatable": true,
+      "component": "elements.statitics"
+    },
+    "reachOut": {
+      "type": "component",
+      "repeatable": false,
+      "component": "elements.card"
+    },
+    "caseStudy": {
+      "type": "component",
+      "repeatable": false,
+      "component": "row.card-row"
+    },
+    "customerStory": {
+      "type": "component",
+      "repeatable": false,
+      "component": "elements.customer-stories"
+    },
+    "howWeBuilt": {
+      "type": "component",
+      "repeatable": false,
+      "component": "elements.customer-stories"
+    },
+    "IntroSlider": {
+      "type": "component",
+      "repeatable": false,
+      "component": "row.info-card-row"
+    }
+  }
+}
