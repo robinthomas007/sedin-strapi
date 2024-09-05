@@ -1076,7 +1076,7 @@ export interface ApiDigitalCommerceOverviewDigitalCommerceOverview
     howWeBuilt: Attribute.Component<'elements.customer-stories'>;
     faqs: Attribute.Component<'row.faq-row'>;
     dcSlider: Attribute.Component<'row.info-card-row'>;
-    introSlider: Attribute.Component<'row.card-row'>;
+    introSlider: Attribute.Component<'row.info-card-row'>;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
