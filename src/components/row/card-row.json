@@ -1,8 +1,7 @@
 {
   "collectionName": "components_row_card_rows",
   "info": {
-    "displayName": "cardRow",
-    "description": ""
+    "displayName": "cardRow"
   },
   "options": {},
   "attributes": {
@@ -21,10 +20,10 @@
         "videos"
       ]
     },
-    "csrs": {
-      "type": "relation",
-      "relation": "oneToMany",
-      "target": "api::csr.csr"
+    "cards": {
+      "type": "component",
+      "repeatable": true,
+      "component": "elements.card"
     }
   }
 }
