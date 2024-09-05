@@ -1,0 +1,26 @@
+{
+  "kind": "collectionType",
+  "collectionName": "csr_lists",
+  "info": {
+    "singularName": "csr-list",
+    "pluralName": "csr-lists",
+    "displayName": "CSR List"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "slug": {
+      "type": "string"
+    },
+    "title": {
+      "type": "string"
+    },
+    "csr": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::csr.csr"
+    }
+  }
+}

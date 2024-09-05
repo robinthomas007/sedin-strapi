@@ -952,7 +952,7 @@ export interface ApiCaseStudyContentCaseStudyContent
   };
 }
 
-export interface ApiCsrCsr extends Schema.SingleType {
+export interface ApiCsrCsr extends Schema.CollectionType {
   collectionName: 'csrs';
   info: {
     singularName: 'csr';
@@ -974,6 +974,42 @@ export interface ApiCsrCsr extends Schema.SingleType {
     createdBy: Attribute.Relation<'api::csr.csr', 'oneToOne', 'admin::user'> &
       Attribute.Private;
     updatedBy: Attribute.Relation<'api::csr.csr', 'oneToOne', 'admin::user'> &
+      Attribute.Private;
+  };
+}
+
+export interface ApiCsrListCsrList extends Schema.CollectionType {
+  collectionName: 'csr_lists';
+  info: {
+    singularName: 'csr-list';
+    pluralName: 'csr-lists';
+    displayName: 'CSR List';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    slug: Attribute.String;
+    title: Attribute.String;
+    csr: Attribute.Relation<
+      'api::csr-list.csr-list',
+      'oneToOne',
+      'api::csr.csr'
+    >;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::csr-list.csr-list',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::csr-list.csr-list',
+      'oneToOne',
+      'admin::user'
+    > &
       Attribute.Private;
   };
 }
@@ -1612,6 +1648,7 @@ declare module '@strapi/types' {
       'api::case-study.case-study': ApiCaseStudyCaseStudy;
       'api::case-study-content.case-study-content': ApiCaseStudyContentCaseStudyContent;
       'api::csr.csr': ApiCsrCsr;
+      'api::csr-list.csr-list': ApiCsrListCsrList;
       'api::department.department': ApiDepartmentDepartment;
       'api::digital-enterprise.digital-enterprise': ApiDigitalEnterpriseDigitalEnterprise;
       'api::digital-enterprise-overview.digital-enterprise-overview': ApiDigitalEnterpriseOverviewDigitalEnterpriseOverview;
