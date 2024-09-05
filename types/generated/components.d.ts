@@ -295,6 +295,11 @@ export interface HwbHwbCards extends Schema.Component {
       'api::hwb-child-category.hwb-child-category'
     >;
     cardimg: Attribute.Media;
+    nav_content: Attribute.Relation<
+      'hwb.hwb-cards',
+      'oneToOne',
+      'api::nav-content.nav-content'
+    >;
   };
 }
 
