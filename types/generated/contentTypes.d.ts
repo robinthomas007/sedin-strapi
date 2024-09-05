@@ -1069,13 +1069,14 @@ export interface ApiDigitalCommerceOverviewDigitalCommerceOverview
     intro_section: Attribute.Component<'row.card-row'>;
     introSectionTwo: Attribute.Component<'row.card-row'>;
     clients: Attribute.Component<'elements.list', true>;
-    digitalservices: Attribute.Component<'digital-service.digital-service-list'>;
     statitics: Attribute.Component<'elements.statitics', true>;
     reachOut: Attribute.Component<'elements.card'>;
     caseStudy: Attribute.Component<'row.card-row'>;
     customerStory: Attribute.Component<'elements.customer-stories'>;
     howWeBuilt: Attribute.Component<'elements.customer-stories'>;
     IntroSlider: Attribute.Component<'row.info-card-row'>;
+    faqs: Attribute.Component<'row.faq-row'>;
+    dcSlider: Attribute.Component<'row.info-card-row'>;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
