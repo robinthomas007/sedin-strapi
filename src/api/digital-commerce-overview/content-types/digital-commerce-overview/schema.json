@@ -67,11 +67,6 @@
       "repeatable": false,
       "component": "elements.customer-stories"
     },
-    "IntroSlider": {
-      "type": "component",
-      "repeatable": false,
-      "component": "row.info-card-row"
-    },
     "faqs": {
       "type": "component",
       "repeatable": false,
@@ -81,6 +76,11 @@
       "type": "component",
       "repeatable": false,
       "component": "row.info-card-row"
+    },
+    "introSlider": {
+      "type": "component",
+      "repeatable": false,
+      "component": "row.card-row"
     }
   }
 }
