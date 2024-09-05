@@ -1,0 +1,17 @@
+{
+  "collectionName": "components_kub_eco_systems",
+  "info": {
+    "displayName": "eco system"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "csr_lists": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::csr-list.csr-list"
+    }
+  }
+}

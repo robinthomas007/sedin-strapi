@@ -322,6 +322,21 @@ export interface KubDescriptionlist extends Schema.Component {
   };
 }
 
+export interface KubEcoSystem extends Schema.Component {
+  collectionName: 'components_kub_eco_systems';
+  info: {
+    displayName: 'eco system';
+  };
+  attributes: {
+    title: Attribute.String;
+    csr_lists: Attribute.Relation<
+      'kub.eco-system',
+      'oneToMany',
+      'api::csr-list.csr-list'
+    >;
+  };
+}
+
 export interface KubKubCards extends Schema.Component {
   collectionName: 'components_kub_kub_cards';
   info: {
@@ -451,6 +466,7 @@ declare module '@strapi/types' {
       'hwb.hwb-cards': HwbHwbCards;
       'kub.betterforeveyone': KubBetterforeveyone;
       'kub.descriptionlist': KubDescriptionlist;
+      'kub.eco-system': KubEcoSystem;
       'kub.kub-cards': KubKubCards;
       'kub.leadership-cards': KubLeadershipCards;
       'row.card-row': RowCardRow;

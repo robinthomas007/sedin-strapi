@@ -984,6 +984,7 @@ export interface ApiCsrListCsrList extends Schema.CollectionType {
     singularName: 'csr-list';
     pluralName: 'csr-lists';
     displayName: 'CSR List';
+    description: '';
   };
   options: {
     draftAndPublish: true;
@@ -996,6 +997,10 @@ export interface ApiCsrListCsrList extends Schema.CollectionType {
       'oneToOne',
       'api::csr.csr'
     >;
+    image: Attribute.Media;
+    description: Attribute.Text;
+    tag: Attribute.String;
+    button: Attribute.Component<'elements.button-link'>;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
@@ -1510,6 +1515,7 @@ export interface ApiKnowUsBetterKnowUsBetter extends Schema.SingleType {
     partners: Attribute.Component<'row.card-row'>;
     journeyimageslider: Attribute.Component<'row.card-row'>;
     learningcare: Attribute.Component<'row.card-row'>;
+    ecoSlider: Attribute.Component<'kub.eco-system', true>;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;

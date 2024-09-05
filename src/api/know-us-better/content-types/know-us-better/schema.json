@@ -81,6 +81,11 @@
       "type": "component",
       "repeatable": false,
       "component": "row.card-row"
+    },
+    "ecoSlider": {
+      "type": "component",
+      "repeatable": true,
+      "component": "kub.eco-system"
     }
   }
 }

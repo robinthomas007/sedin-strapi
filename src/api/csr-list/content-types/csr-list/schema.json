@@ -4,7 +4,8 @@
   "info": {
     "singularName": "csr-list",
     "pluralName": "csr-lists",
-    "displayName": "CSR List"
+    "displayName": "CSR List",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true
@@ -21,6 +22,24 @@
       "type": "relation",
       "relation": "oneToOne",
       "target": "api::csr.csr"
+    },
+    "image": {
+      "allowedTypes": [
+        "images"
+      ],
+      "type": "media",
+      "multiple": false
+    },
+    "description": {
+      "type": "text"
+    },
+    "tag": {
+      "type": "string"
+    },
+    "button": {
+      "type": "component",
+      "repeatable": false,
+      "component": "elements.button-link"
     }
   }
 }
