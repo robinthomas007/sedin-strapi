@@ -952,7 +952,7 @@ export interface ApiCaseStudyContentCaseStudyContent
   };
 }
 
-export interface ApiCsrCsr extends Schema.SingleType {
+export interface ApiCsrCsr extends Schema.CollectionType {
   collectionName: 'csrs';
   info: {
     singularName: 'csr';

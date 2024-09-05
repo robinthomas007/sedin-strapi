@@ -36,6 +36,11 @@
         "images",
         "videos"
       ]
+    },
+    "nav_content": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::nav-content.nav-content"
     }
   }
 }

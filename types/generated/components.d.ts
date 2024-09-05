@@ -295,6 +295,11 @@ export interface HwbHwbCards extends Schema.Component {
       'api::hwb-child-category.hwb-child-category'
     >;
     cardimg: Attribute.Media;
+    nav_content: Attribute.Relation<
+      'hwb.hwb-cards',
+      'oneToOne',
+      'api::nav-content.nav-content'
+    >;
   };
 }
 
@@ -355,12 +360,13 @@ export interface RowCardRow extends Schema.Component {
   collectionName: 'components_row_card_rows';
   info: {
     displayName: 'cardRow';
+    description: '';
   };
   attributes: {
     title: Attribute.String;
     description: Attribute.Text;
     background: Attribute.Media;
-    cards: Attribute.Component<'elements.card', true>;
+    csrs: Attribute.Relation<'row.card-row', 'oneToMany', 'api::csr.csr'>;
   };
 }
 
