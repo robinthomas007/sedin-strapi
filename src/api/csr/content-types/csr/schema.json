@@ -27,7 +27,7 @@
       "repeatable": false,
       "component": "elements.card"
     },
-    "csrcards": {
+    "csrCards": {
       "type": "component",
       "repeatable": false,
       "component": "csr.csr"
