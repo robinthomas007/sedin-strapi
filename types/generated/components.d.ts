@@ -79,11 +79,14 @@ export interface CsrCsr extends Schema.Component {
   collectionName: 'components_csr_csrs';
   info: {
     displayName: 'CSR';
+    description: '';
   };
   attributes: {
     maintitle: Attribute.String;
-    cards: Attribute.Component<'row.card-row'>;
     tag: Attribute.String;
+    title: Attribute.String;
+    description: Attribute.String;
+    cards: Attribute.Component<'elements.info-card', true>;
   };
 }
 

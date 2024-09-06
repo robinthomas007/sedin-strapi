@@ -52,11 +52,6 @@
       "repeatable": false,
       "component": "kub.kub-cards"
     },
-    "ecosystemslider": {
-      "type": "component",
-      "repeatable": false,
-      "component": "row.card-row"
-    },
     "betterforeveryone": {
       "type": "component",
       "repeatable": false,
@@ -84,7 +79,7 @@
     },
     "ecoSlider": {
       "type": "component",
-      "repeatable": true,
+      "repeatable": false,
       "component": "kub.eco-system"
     }
   }

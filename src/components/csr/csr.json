@@ -1,20 +1,27 @@
 {
   "collectionName": "components_csr_csrs",
   "info": {
-    "displayName": "CSR"
+    "displayName": "CSR",
+    "description": ""
   },
   "options": {},
   "attributes": {
     "maintitle": {
       "type": "string"
     },
-    "cards": {
-      "type": "component",
-      "repeatable": false,
-      "component": "row.card-row"
-    },
     "tag": {
       "type": "string"
+    },
+    "title": {
+      "type": "string"
+    },
+    "description": {
+      "type": "string"
+    },
+    "cards": {
+      "type": "component",
+      "repeatable": true,
+      "component": "elements.info-card"
     }
   }
 }
