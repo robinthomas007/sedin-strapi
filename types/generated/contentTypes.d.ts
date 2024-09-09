@@ -788,6 +788,46 @@ export interface PluginUsersPermissionsUser extends Schema.CollectionType {
   };
 }
 
+export interface ApiAiChapterAiChapter extends Schema.SingleType {
+  collectionName: 'ai_chapters';
+  info: {
+    singularName: 'ai-chapter';
+    pluralName: 'ai-chapters';
+    displayName: 'AI chapter';
+    description: '';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    seo: Attribute.Component<'seo.meta', true>;
+    breadcrumbs: Attribute.Component<'elements.link-list', true>;
+    headerSection: Attribute.Component<'elements.card'>;
+    headerCards: Attribute.Component<'row.card-row'>;
+    clients: Attribute.Component<'elements.list', true>;
+    howWeBetter: Attribute.Component<'row.card-row'>;
+    statitics: Attribute.Component<'elements.statitics', true>;
+    customerStories: Attribute.Component<'elements.customer-stories'>;
+    reachOut: Attribute.Component<'elements.card'>;
+    faqs: Attribute.Component<'row.faq-row'>;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::ai-chapter.ai-chapter',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::ai-chapter.ai-chapter',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
 export interface ApiBetterTheBestBetterTheBest extends Schema.SingleType {
   collectionName: 'better_the_bests';
   info: {
@@ -967,7 +1007,7 @@ export interface ApiCsrCsr extends Schema.CollectionType {
     seo: Attribute.Component<'seo.meta'>;
     breadcrumbs: Attribute.Component<'elements.link-list', true>;
     headerSection: Attribute.Component<'elements.card'>;
-    csrcards: Attribute.Component<'csr.csr'>;
+    csrCards: Attribute.Component<'csr.csr'>;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
@@ -1693,6 +1733,7 @@ declare module '@strapi/types' {
       'plugin::users-permissions.permission': PluginUsersPermissionsPermission;
       'plugin::users-permissions.role': PluginUsersPermissionsRole;
       'plugin::users-permissions.user': PluginUsersPermissionsUser;
+      'api::ai-chapter.ai-chapter': ApiAiChapterAiChapter;
       'api::better-the-best.better-the-best': ApiBetterTheBestBetterTheBest;
       'api::carrer.carrer': ApiCarrerCarrer;
       'api::case-study.case-study': ApiCaseStudyCaseStudy;

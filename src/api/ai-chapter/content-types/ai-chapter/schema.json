@@ -1,0 +1,66 @@
+{
+  "kind": "singleType",
+  "collectionName": "ai_chapters",
+  "info": {
+    "singularName": "ai-chapter",
+    "pluralName": "ai-chapters",
+    "displayName": "AI chapter",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "seo": {
+      "type": "component",
+      "repeatable": true,
+      "component": "seo.meta"
+    },
+    "breadcrumbs": {
+      "type": "component",
+      "repeatable": true,
+      "component": "elements.link-list"
+    },
+    "headerSection": {
+      "type": "component",
+      "repeatable": false,
+      "component": "elements.card"
+    },
+    "headerCards": {
+      "type": "component",
+      "repeatable": false,
+      "component": "row.card-row"
+    },
+    "clients": {
+      "type": "component",
+      "repeatable": true,
+      "component": "elements.list"
+    },
+    "howWeBetter": {
+      "type": "component",
+      "repeatable": false,
+      "component": "row.card-row"
+    },
+    "statitics": {
+      "type": "component",
+      "repeatable": true,
+      "component": "elements.statitics"
+    },
+    "customerStories": {
+      "type": "component",
+      "repeatable": false,
+      "component": "elements.customer-stories"
+    },
+    "reachOut": {
+      "type": "component",
+      "repeatable": false,
+      "component": "elements.card"
+    },
+    "faqs": {
+      "type": "component",
+      "repeatable": false,
+      "component": "row.faq-row"
+    }
+  }
+}
