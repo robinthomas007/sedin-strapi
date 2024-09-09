@@ -1,0 +1,61 @@
+{
+  "kind": "singleType",
+  "collectionName": "csr_policies",
+  "info": {
+    "singularName": "csr-policy",
+    "pluralName": "csr-policies",
+    "displayName": "csr policy",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "seo": {
+      "type": "component",
+      "repeatable": false,
+      "component": "seo.meta"
+    },
+    "breadcrumbs": {
+      "type": "component",
+      "repeatable": true,
+      "component": "elements.link-list"
+    },
+    "objectives": {
+      "type": "component",
+      "repeatable": false,
+      "component": "row.card-row"
+    },
+    "csrActivities": {
+      "type": "component",
+      "repeatable": false,
+      "component": "row.info-card-row"
+    },
+    "csrCommitte": {
+      "type": "component",
+      "repeatable": true,
+      "component": "row.info-card-row"
+    },
+    "csrResponsibilities": {
+      "type": "component",
+      "repeatable": false,
+      "component": "case-study.case-studies-card"
+    },
+    "csrExpenditure": {
+      "type": "component",
+      "repeatable": false,
+      "component": "case-study.case-studies-card"
+    },
+    "csrDisclosure": {
+      "type": "component",
+      "repeatable": false,
+      "component": "elements.card"
+    },
+    "csrHeaderSection": {
+      "type": "component",
+      "repeatable": false,
+      "component": "elements.info-card"
+    }
+  }
+}

@@ -1059,6 +1059,45 @@ export interface ApiCsrListCsrList extends Schema.CollectionType {
   };
 }
 
+export interface ApiCsrPolicyCsrPolicy extends Schema.SingleType {
+  collectionName: 'csr_policies';
+  info: {
+    singularName: 'csr-policy';
+    pluralName: 'csr-policies';
+    displayName: 'csr policy';
+    description: '';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    seo: Attribute.Component<'seo.meta'>;
+    breadcrumbs: Attribute.Component<'elements.link-list', true>;
+    objectives: Attribute.Component<'row.card-row'>;
+    csrActivities: Attribute.Component<'row.info-card-row'>;
+    csrCommitte: Attribute.Component<'row.info-card-row', true>;
+    csrResponsibilities: Attribute.Component<'case-study.case-studies-card'>;
+    csrExpenditure: Attribute.Component<'case-study.case-studies-card'>;
+    csrDisclosure: Attribute.Component<'elements.card'>;
+    csrHeaderSection: Attribute.Component<'elements.info-card'>;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::csr-policy.csr-policy',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::csr-policy.csr-policy',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
 export interface ApiDepartmentDepartment extends Schema.CollectionType {
   collectionName: 'departments';
   info: {
@@ -1740,6 +1779,7 @@ declare module '@strapi/types' {
       'api::case-study-content.case-study-content': ApiCaseStudyContentCaseStudyContent;
       'api::csr.csr': ApiCsrCsr;
       'api::csr-list.csr-list': ApiCsrListCsrList;
+      'api::csr-policy.csr-policy': ApiCsrPolicyCsrPolicy;
       'api::department.department': ApiDepartmentDepartment;
       'api::digital-commerce-overview.digital-commerce-overview': ApiDigitalCommerceOverviewDigitalCommerceOverview;
       'api::digital-enterprise.digital-enterprise': ApiDigitalEnterpriseDigitalEnterprise;
