@@ -1,0 +1,18 @@
+{
+  "collectionName": "components_ai_chapter_ai_chapters",
+  "info": {
+    "displayName": "AI chapter",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "mainTitle": {
+      "type": "string"
+    },
+    "ce_headers": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::ce-header.ce-header"
+    }
+  }
+}

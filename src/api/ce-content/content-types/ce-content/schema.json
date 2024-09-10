@@ -1,0 +1,21 @@
+{
+  "kind": "collectionType",
+  "collectionName": "ce_contents",
+  "info": {
+    "singularName": "ce-content",
+    "pluralName": "ce-contents",
+    "displayName": "CE content",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "ceCards": {
+      "type": "component",
+      "repeatable": false,
+      "component": "row.card-row"
+    }
+  }
+}

@@ -1,5 +1,21 @@
 import type { Schema, Attribute } from '@strapi/strapi';
 
+export interface AiChapterAiChapter extends Schema.Component {
+  collectionName: 'components_ai_chapter_ai_chapters';
+  info: {
+    displayName: 'AI chapter';
+    description: '';
+  };
+  attributes: {
+    mainTitle: Attribute.String;
+    ce_headers: Attribute.Relation<
+      'ai-chapter.ai-chapter',
+      'oneToMany',
+      'api::ce-header.ce-header'
+    >;
+  };
+}
+
 export interface CarrerCarrer extends Schema.Component {
   collectionName: 'components_carrer_carrers';
   info: {
@@ -446,6 +462,7 @@ export interface SeoMeta extends Schema.Component {
 declare module '@strapi/types' {
   export module Shared {
     export interface Components {
+      'ai-chapter.ai-chapter': AiChapterAiChapter;
       'carrer.carrer': CarrerCarrer;
       'carrer.review': CarrerReview;
       'case-study.case-studies-card': CaseStudyCaseStudiesCard;

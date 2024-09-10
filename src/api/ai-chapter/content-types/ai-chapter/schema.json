@@ -61,6 +61,11 @@
       "type": "component",
       "repeatable": false,
       "component": "row.faq-row"
+    },
+    "classEnterprise": {
+      "type": "component",
+      "repeatable": false,
+      "component": "ai-chapter.ai-chapter"
     }
   }
 }

@@ -810,6 +810,7 @@ export interface ApiAiChapterAiChapter extends Schema.SingleType {
     customerStories: Attribute.Component<'elements.customer-stories'>;
     reachOut: Attribute.Component<'elements.card'>;
     faqs: Attribute.Component<'row.faq-row'>;
+    classEnterprise: Attribute.Component<'ai-chapter.ai-chapter'>;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
@@ -985,6 +986,73 @@ export interface ApiCaseStudyContentCaseStudyContent
       Attribute.Private;
     updatedBy: Attribute.Relation<
       'api::case-study-content.case-study-content',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
+export interface ApiCeContentCeContent extends Schema.CollectionType {
+  collectionName: 'ce_contents';
+  info: {
+    singularName: 'ce-content';
+    pluralName: 'ce-contents';
+    displayName: 'CE content';
+    description: '';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    ceCards: Attribute.Component<'row.card-row'>;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::ce-content.ce-content',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::ce-content.ce-content',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
+export interface ApiCeHeaderCeHeader extends Schema.CollectionType {
+  collectionName: 'ce_headers';
+  info: {
+    singularName: 'ce-header';
+    pluralName: 'ce-headers';
+    displayName: 'CE header';
+    description: '';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    title: Attribute.String;
+    ce_content: Attribute.Relation<
+      'api::ce-header.ce-header',
+      'oneToOne',
+      'api::ce-content.ce-content'
+    >;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::ce-header.ce-header',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::ce-header.ce-header',
       'oneToOne',
       'admin::user'
     > &
@@ -1777,6 +1845,8 @@ declare module '@strapi/types' {
       'api::carrer.carrer': ApiCarrerCarrer;
       'api::case-study.case-study': ApiCaseStudyCaseStudy;
       'api::case-study-content.case-study-content': ApiCaseStudyContentCaseStudyContent;
+      'api::ce-content.ce-content': ApiCeContentCeContent;
+      'api::ce-header.ce-header': ApiCeHeaderCeHeader;
       'api::csr.csr': ApiCsrCsr;
       'api::csr-list.csr-list': ApiCsrListCsrList;
       'api::csr-policy.csr-policy': ApiCsrPolicyCsrPolicy;
