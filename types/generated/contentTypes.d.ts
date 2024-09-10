@@ -1075,7 +1075,7 @@ export interface ApiCsrPolicyCsrPolicy extends Schema.SingleType {
     breadcrumbs: Attribute.Component<'elements.link-list', true>;
     objectives: Attribute.Component<'row.card-row'>;
     csrActivities: Attribute.Component<'row.info-card-row'>;
-    csrCommitte: Attribute.Component<'row.info-card-row', true>;
+    csrCommitte: Attribute.Component<'row.info-card-row'>;
     csrResponsibilities: Attribute.Component<'case-study.case-studies-card'>;
     csrExpenditure: Attribute.Component<'case-study.case-studies-card'>;
     csrDisclosure: Attribute.Component<'elements.card'>;

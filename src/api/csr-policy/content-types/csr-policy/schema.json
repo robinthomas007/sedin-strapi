@@ -34,7 +34,7 @@
     },
     "csrCommitte": {
       "type": "component",
-      "repeatable": true,
+      "repeatable": false,
       "component": "row.info-card-row"
     },
     "csrResponsibilities": {
