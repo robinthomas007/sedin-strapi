@@ -77,16 +77,29 @@ export interface CaseStudyCaseStudyIntro extends Schema.Component {
   };
 }
 
-export interface ContactBlockContactUsBlock extends Schema.Component {
-  collectionName: 'components_contact_block_contact_us_blocks';
+export interface ContactformContactForm extends Schema.Component {
+  collectionName: 'components_contactform_contact_forms';
   info: {
-    displayName: 'contactUsBlock';
+    displayName: 'contact Form';
     description: '';
   };
   attributes: {
-    title: Attribute.String & Attribute.Required;
-    description: Attribute.Text & Attribute.Required;
-    image: Attribute.Media & Attribute.Required;
+    title: Attribute.String;
+    services: Attribute.Relation<
+      'contactform.contact-form',
+      'oneToMany',
+      'api::service.service'
+    >;
+    about_uses: Attribute.Relation<
+      'contactform.contact-form',
+      'oneToMany',
+      'api::about-us.about-us'
+    >;
+    name: Attribute.String;
+    email: Attribute.String;
+    phone: Attribute.String;
+    message: Attribute.Text;
+    TC: Attribute.Boolean;
     button: Attribute.Component<'elements.button-link'>;
   };
 }
@@ -467,7 +480,7 @@ declare module '@strapi/types' {
       'carrer.review': CarrerReview;
       'case-study.case-studies-card': CaseStudyCaseStudiesCard;
       'case-study.case-study-intro': CaseStudyCaseStudyIntro;
-      'contact-block.contact-us-block': ContactBlockContactUsBlock;
+      'contactform.contact-form': ContactformContactForm;
       'csr.csr': CsrCsr;
       'digital-service.digital-service-list': DigitalServiceDigitalServiceList;
       'digital-service.digital-service': DigitalServiceDigitalService;

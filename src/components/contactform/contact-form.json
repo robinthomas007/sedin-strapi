@@ -1,0 +1,43 @@
+{
+  "collectionName": "components_contactform_contact_forms",
+  "info": {
+    "displayName": "contact Form",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "services": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::service.service"
+    },
+    "about_uses": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::about-us.about-us"
+    },
+    "name": {
+      "type": "string"
+    },
+    "email": {
+      "type": "string"
+    },
+    "phone": {
+      "type": "string"
+    },
+    "message": {
+      "type": "text"
+    },
+    "TC": {
+      "type": "boolean"
+    },
+    "button": {
+      "type": "component",
+      "repeatable": false,
+      "component": "elements.button-link"
+    }
+  }
+}

@@ -788,6 +788,36 @@ export interface PluginUsersPermissionsUser extends Schema.CollectionType {
   };
 }
 
+export interface ApiAboutUsAboutUs extends Schema.CollectionType {
+  collectionName: 'about_uses';
+  info: {
+    singularName: 'about-us';
+    pluralName: 'about-uses';
+    displayName: 'aboutUs';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    title: Attribute.String;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::about-us.about-us',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::about-us.about-us',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
 export interface ApiAiChapterAiChapter extends Schema.SingleType {
   collectionName: 'ai_chapters';
   info: {
@@ -1053,6 +1083,40 @@ export interface ApiCeHeaderCeHeader extends Schema.CollectionType {
       Attribute.Private;
     updatedBy: Attribute.Relation<
       'api::ce-header.ce-header',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
+export interface ApiContactUsContactUs extends Schema.SingleType {
+  collectionName: 'contact_uses';
+  info: {
+    singularName: 'contact-us';
+    pluralName: 'contact-uses';
+    displayName: 'Contact Us';
+    description: '';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    seo: Attribute.Component<'seo.meta'>;
+    breadcrumbs: Attribute.Component<'elements.link-list', true>;
+    CForm: Attribute.Component<'contactform.contact-form'>;
+    sliders: Attribute.Component<'row.card-row'>;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::contact-us.contact-us',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::contact-us.contact-us',
       'oneToOne',
       'admin::user'
     > &
@@ -1788,6 +1852,36 @@ export interface ApiNavContentNavContent extends Schema.CollectionType {
   };
 }
 
+export interface ApiServiceService extends Schema.CollectionType {
+  collectionName: 'services';
+  info: {
+    singularName: 'service';
+    pluralName: 'services';
+    displayName: 'service';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    title: Attribute.String;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::service.service',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::service.service',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
 export interface ApiTabContentTabContent extends Schema.CollectionType {
   collectionName: 'tab_contents';
   info: {
@@ -1840,6 +1934,7 @@ declare module '@strapi/types' {
       'plugin::users-permissions.permission': PluginUsersPermissionsPermission;
       'plugin::users-permissions.role': PluginUsersPermissionsRole;
       'plugin::users-permissions.user': PluginUsersPermissionsUser;
+      'api::about-us.about-us': ApiAboutUsAboutUs;
       'api::ai-chapter.ai-chapter': ApiAiChapterAiChapter;
       'api::better-the-best.better-the-best': ApiBetterTheBestBetterTheBest;
       'api::carrer.carrer': ApiCarrerCarrer;
@@ -1847,6 +1942,7 @@ declare module '@strapi/types' {
       'api::case-study-content.case-study-content': ApiCaseStudyContentCaseStudyContent;
       'api::ce-content.ce-content': ApiCeContentCeContent;
       'api::ce-header.ce-header': ApiCeHeaderCeHeader;
+      'api::contact-us.contact-us': ApiContactUsContactUs;
       'api::csr.csr': ApiCsrCsr;
       'api::csr-list.csr-list': ApiCsrListCsrList;
       'api::csr-policy.csr-policy': ApiCsrPolicyCsrPolicy;
@@ -1866,6 +1962,7 @@ declare module '@strapi/types' {
       'api::know-us-better.know-us-better': ApiKnowUsBetterKnowUsBetter;
       'api::location.location': ApiLocationLocation;
       'api::nav-content.nav-content': ApiNavContentNavContent;
+      'api::service.service': ApiServiceService;
       'api::tab-content.tab-content': ApiTabContentTabContent;
     }
   }
