@@ -100,6 +100,7 @@ export interface ContactformContactForm extends Schema.Component {
     phone: Attribute.String;
     message: Attribute.Text;
     button: Attribute.Component<'elements.button-link'>;
+    formKeepKey: Attribute.Text;
   };
 }
 

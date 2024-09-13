@@ -35,6 +35,9 @@
       "type": "component",
       "repeatable": false,
       "component": "elements.button-link"
+    },
+    "formKeepKey": {
+      "type": "text"
     }
   }
 }
