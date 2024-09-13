@@ -32,6 +32,11 @@
       "type": "component",
       "repeatable": false,
       "component": "row.card-row"
+    },
+    "headerSection": {
+      "type": "component",
+      "repeatable": false,
+      "component": "elements.card"
     }
   }
 }

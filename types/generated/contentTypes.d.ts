@@ -1106,6 +1106,7 @@ export interface ApiContactUsContactUs extends Schema.SingleType {
     breadcrumbs: Attribute.Component<'elements.link-list', true>;
     CForm: Attribute.Component<'contactform.contact-form'>;
     sliders: Attribute.Component<'row.card-row'>;
+    headerSection: Attribute.Component<'elements.card'>;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
