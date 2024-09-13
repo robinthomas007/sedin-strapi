@@ -31,9 +31,6 @@
     "message": {
       "type": "text"
     },
-    "TC": {
-      "type": "boolean"
-    },
     "button": {
       "type": "component",
       "repeatable": false,
