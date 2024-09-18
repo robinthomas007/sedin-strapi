@@ -446,6 +446,7 @@ export interface RowInfoCardRow extends Schema.Component {
     description: Attribute.Text;
     background: Attribute.Media;
     infoCard: Attribute.Component<'elements.info-card', true>;
+    description2: Attribute.Text;
   };
 }
 

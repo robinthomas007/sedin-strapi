@@ -1,0 +1,131 @@
+{
+  "kind": "singleType",
+  "collectionName": "terms_and_conditions",
+  "info": {
+    "singularName": "terms-and-condition",
+    "pluralName": "terms-and-conditions",
+    "displayName": "terms and condition",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "seo": {
+      "type": "component",
+      "repeatable": false,
+      "component": "seo.meta"
+    },
+    "breadcrumbs": {
+      "type": "component",
+      "repeatable": true,
+      "component": "elements.link-list"
+    },
+    "headerSection": {
+      "type": "component",
+      "repeatable": false,
+      "component": "elements.card"
+    },
+    "intro": {
+      "type": "component",
+      "repeatable": false,
+      "component": "elements.info-card"
+    },
+    "definitions": {
+      "type": "component",
+      "repeatable": true,
+      "component": "row.info-card-row"
+    },
+    "generalTerms": {
+      "type": "component",
+      "repeatable": true,
+      "component": "row.info-card-row"
+    },
+    "serviceOverview": {
+      "type": "component",
+      "repeatable": true,
+      "component": "row.info-card-row"
+    },
+    "registration": {
+      "type": "component",
+      "repeatable": false,
+      "component": "elements.info-card"
+    },
+    "eligibility": {
+      "type": "component",
+      "repeatable": true,
+      "component": "row.info-card-row"
+    },
+    "content": {
+      "type": "component",
+      "repeatable": true,
+      "component": "row.info-card-row"
+    },
+    "indemnity": {
+      "type": "component",
+      "repeatable": false,
+      "component": "elements.info-card"
+    },
+    "terms": {
+      "type": "component",
+      "repeatable": true,
+      "component": "row.info-card-row"
+    },
+    "communication": {
+      "type": "component",
+      "repeatable": true,
+      "component": "row.info-card-row"
+    },
+    "obligations": {
+      "type": "component",
+      "repeatable": false,
+      "component": "row.card-row"
+    },
+    "beta": {
+      "type": "component",
+      "repeatable": false,
+      "component": "elements.info-card"
+    },
+    "tech_imp": {
+      "type": "component",
+      "repeatable": false,
+      "component": "elements.info-card"
+    },
+    "intel_pro_right ": {
+      "type": "component",
+      "repeatable": false,
+      "component": "elements.info-card"
+    },
+    "force": {
+      "type": "component",
+      "repeatable": false,
+      "component": "elements.info-card"
+    },
+    "no_warrenty": {
+      "type": "component",
+      "repeatable": false,
+      "component": "elements.info-card"
+    },
+    "dispute_resolution": {
+      "type": "component",
+      "repeatable": true,
+      "component": "row.info-card-row"
+    },
+    "grievances": {
+      "type": "component",
+      "repeatable": false,
+      "component": "elements.info-card"
+    },
+    "disclosure": {
+      "type": "component",
+      "repeatable": true,
+      "component": "row.info-card-row"
+    },
+    "contact_us": {
+      "type": "component",
+      "repeatable": false,
+      "component": "elements.info-card"
+    }
+  }
+}

@@ -1917,6 +1917,60 @@ export interface ApiTabContentTabContent extends Schema.CollectionType {
   };
 }
 
+export interface ApiTermsAndConditionTermsAndCondition
+  extends Schema.SingleType {
+  collectionName: 'terms_and_conditions';
+  info: {
+    singularName: 'terms-and-condition';
+    pluralName: 'terms-and-conditions';
+    displayName: 'terms and condition';
+    description: '';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    seo: Attribute.Component<'seo.meta'>;
+    breadcrumbs: Attribute.Component<'elements.link-list', true>;
+    headerSection: Attribute.Component<'elements.card'>;
+    intro: Attribute.Component<'elements.info-card'>;
+    definitions: Attribute.Component<'row.info-card-row', true>;
+    generalTerms: Attribute.Component<'row.info-card-row', true>;
+    serviceOverview: Attribute.Component<'row.info-card-row', true>;
+    registration: Attribute.Component<'elements.info-card'>;
+    eligibility: Attribute.Component<'row.info-card-row', true>;
+    content: Attribute.Component<'row.info-card-row', true>;
+    indemnity: Attribute.Component<'elements.info-card'>;
+    terms: Attribute.Component<'row.info-card-row', true>;
+    communication: Attribute.Component<'row.info-card-row', true>;
+    obligations: Attribute.Component<'row.card-row'>;
+    beta: Attribute.Component<'elements.info-card'>;
+    tech_imp: Attribute.Component<'elements.info-card'>;
+    intel_pro_right: Attribute.Component<'elements.info-card'>;
+    force: Attribute.Component<'elements.info-card'>;
+    no_warrenty: Attribute.Component<'elements.info-card'>;
+    dispute_resolution: Attribute.Component<'row.info-card-row', true>;
+    grievances: Attribute.Component<'elements.info-card'>;
+    disclosure: Attribute.Component<'row.info-card-row', true>;
+    contact_us: Attribute.Component<'elements.info-card'>;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::terms-and-condition.terms-and-condition',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::terms-and-condition.terms-and-condition',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
 declare module '@strapi/types' {
   export module Shared {
     export interface ContentTypes {
@@ -1965,6 +2019,7 @@ declare module '@strapi/types' {
       'api::nav-content.nav-content': ApiNavContentNavContent;
       'api::service.service': ApiServiceService;
       'api::tab-content.tab-content': ApiTabContentTabContent;
+      'api::terms-and-condition.terms-and-condition': ApiTermsAndConditionTermsAndCondition;
     }
   }
 }
