@@ -62,11 +62,6 @@
       "repeatable": false,
       "component": "row.card-row"
     },
-    "Rights": {
-      "type": "component",
-      "repeatable": false,
-      "component": "row.card-row"
-    },
     "Disclosure": {
       "type": "component",
       "repeatable": false,
@@ -107,6 +102,11 @@
       "type": "component",
       "repeatable": false,
       "component": "privacy.priv-policy"
+    },
+    "Rights": {
+      "type": "component",
+      "repeatable": false,
+      "component": "row.info-card-row"
     }
   }
 }

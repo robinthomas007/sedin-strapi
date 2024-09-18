@@ -1875,7 +1875,6 @@ export interface ApiPrivacyPolicyPrivacyPolicy extends Schema.SingleType {
     HowInfo: Attribute.Component<'row.card-row'>;
     externalLinks: Attribute.Component<'row.card-row'>;
     googleAnalytics: Attribute.Component<'row.card-row'>;
-    Rights: Attribute.Component<'row.card-row'>;
     Disclosure: Attribute.Component<'row.card-row'>;
     DisclosureSection2: Attribute.Component<'row.image-card-wrapper'>;
     Security: Attribute.Component<'row.card-row'>;
@@ -1884,6 +1883,7 @@ export interface ApiPrivacyPolicyPrivacyPolicy extends Schema.SingleType {
     AutomatedDecision: Attribute.Component<'row.card-row'>;
     ContactUs: Attribute.Component<'row.card-row'>;
     PolicyInfo: Attribute.Component<'privacy.priv-policy'>;
+    Rights: Attribute.Component<'row.info-card-row'>;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
