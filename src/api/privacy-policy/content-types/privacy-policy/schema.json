@@ -27,7 +27,7 @@
       "repeatable": false,
       "component": "elements.card"
     },
-    "intro_section": {
+    "introSection": {
       "type": "component",
       "repeatable": false,
       "component": "row.card-row"
@@ -37,7 +37,7 @@
       "repeatable": false,
       "component": "row.card-row"
     },
-    "third_parties": {
+    "thirdParties": {
       "type": "component",
       "repeatable": false,
       "component": "row.card-row"
