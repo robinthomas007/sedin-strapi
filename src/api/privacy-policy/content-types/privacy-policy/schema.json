@@ -1,0 +1,112 @@
+{
+  "kind": "singleType",
+  "collectionName": "privacy_policies",
+  "info": {
+    "singularName": "privacy-policy",
+    "pluralName": "privacy-policies",
+    "displayName": "privacy Policy",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "seo": {
+      "type": "component",
+      "repeatable": false,
+      "component": "seo.meta"
+    },
+    "breadcrumbs": {
+      "type": "component",
+      "repeatable": true,
+      "component": "elements.link-list"
+    },
+    "headerSection": {
+      "type": "component",
+      "repeatable": false,
+      "component": "elements.card"
+    },
+    "intro_section": {
+      "type": "component",
+      "repeatable": false,
+      "component": "row.card-row"
+    },
+    "definitions": {
+      "type": "component",
+      "repeatable": false,
+      "component": "row.card-row"
+    },
+    "third_parties": {
+      "type": "component",
+      "repeatable": false,
+      "component": "row.card-row"
+    },
+    "useInfo": {
+      "type": "component",
+      "repeatable": false,
+      "component": "row.card-row"
+    },
+    "HowInfo": {
+      "type": "component",
+      "repeatable": false,
+      "component": "row.card-row"
+    },
+    "externalLinks": {
+      "type": "component",
+      "repeatable": false,
+      "component": "row.card-row"
+    },
+    "googleAnalytics": {
+      "type": "component",
+      "repeatable": false,
+      "component": "row.card-row"
+    },
+    "Rights": {
+      "type": "component",
+      "repeatable": false,
+      "component": "row.card-row"
+    },
+    "Disclosure": {
+      "type": "component",
+      "repeatable": false,
+      "component": "row.card-row"
+    },
+    "DisclosureSection2": {
+      "type": "component",
+      "repeatable": false,
+      "component": "row.image-card-wrapper"
+    },
+    "Security": {
+      "type": "component",
+      "repeatable": false,
+      "component": "row.card-row"
+    },
+    "Severability": {
+      "type": "component",
+      "repeatable": false,
+      "component": "row.card-row"
+    },
+    "Amendment": {
+      "type": "component",
+      "repeatable": false,
+      "component": "row.card-row"
+    },
+    "AutomatedDecision": {
+      "type": "component",
+      "repeatable": false,
+      "component": "row.card-row"
+    },
+    "ContactUs": {
+      "type": "component",
+      "repeatable": false,
+      "component": "row.card-row"
+    },
+    "PolicyInfo": {
+      "displayName": "privPolicy",
+      "type": "component",
+      "repeatable": false,
+      "component": "privacy.priv-policy"
+    }
+  }
+}

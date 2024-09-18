@@ -1853,6 +1853,55 @@ export interface ApiNavContentNavContent extends Schema.CollectionType {
   };
 }
 
+export interface ApiPrivacyPolicyPrivacyPolicy extends Schema.SingleType {
+  collectionName: 'privacy_policies';
+  info: {
+    singularName: 'privacy-policy';
+    pluralName: 'privacy-policies';
+    displayName: 'privacy Policy';
+    description: '';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    seo: Attribute.Component<'seo.meta'>;
+    breadcrumbs: Attribute.Component<'elements.link-list', true>;
+    headerSection: Attribute.Component<'elements.card'>;
+    intro_section: Attribute.Component<'row.card-row'>;
+    definitions: Attribute.Component<'row.card-row'>;
+    third_parties: Attribute.Component<'row.card-row'>;
+    useInfo: Attribute.Component<'row.card-row'>;
+    HowInfo: Attribute.Component<'row.card-row'>;
+    externalLinks: Attribute.Component<'row.card-row'>;
+    googleAnalytics: Attribute.Component<'row.card-row'>;
+    Rights: Attribute.Component<'row.card-row'>;
+    Disclosure: Attribute.Component<'row.card-row'>;
+    DisclosureSection2: Attribute.Component<'row.image-card-wrapper'>;
+    Security: Attribute.Component<'row.card-row'>;
+    Severability: Attribute.Component<'row.card-row'>;
+    Amendment: Attribute.Component<'row.card-row'>;
+    AutomatedDecision: Attribute.Component<'row.card-row'>;
+    ContactUs: Attribute.Component<'row.card-row'>;
+    PolicyInfo: Attribute.Component<'privacy.priv-policy'>;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::privacy-policy.privacy-policy',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::privacy-policy.privacy-policy',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
 export interface ApiServiceService extends Schema.CollectionType {
   collectionName: 'services';
   info: {
@@ -2017,6 +2066,7 @@ declare module '@strapi/types' {
       'api::know-us-better.know-us-better': ApiKnowUsBetterKnowUsBetter;
       'api::location.location': ApiLocationLocation;
       'api::nav-content.nav-content': ApiNavContentNavContent;
+      'api::privacy-policy.privacy-policy': ApiPrivacyPolicyPrivacyPolicy;
       'api::service.service': ApiServiceService;
       'api::tab-content.tab-content': ApiTabContentTabContent;
       'api::terms-and-condition.terms-and-condition': ApiTermsAndConditionTermsAndCondition;

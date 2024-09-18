@@ -1,0 +1,29 @@
+{
+  "collectionName": "components_privacy_priv_policies",
+  "info": {
+    "displayName": "privPolicy",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "description": {
+      "type": "text"
+    },
+    "imagecard": {
+      "type": "component",
+      "repeatable": true,
+      "component": "elements.info-card"
+    },
+    "description2": {
+      "type": "text"
+    },
+    "imagecard2": {
+      "type": "component",
+      "repeatable": true,
+      "component": "elements.info-card"
+    }
+  }
+}
