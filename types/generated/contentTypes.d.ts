@@ -1868,9 +1868,9 @@ export interface ApiPrivacyPolicyPrivacyPolicy extends Schema.SingleType {
     seo: Attribute.Component<'seo.meta'>;
     breadcrumbs: Attribute.Component<'elements.link-list', true>;
     headerSection: Attribute.Component<'elements.card'>;
-    intro_section: Attribute.Component<'row.card-row'>;
+    introSection: Attribute.Component<'row.card-row'>;
     definitions: Attribute.Component<'row.card-row'>;
-    third_parties: Attribute.Component<'row.card-row'>;
+    thirdParties: Attribute.Component<'row.card-row'>;
     useInfo: Attribute.Component<'row.card-row'>;
     HowInfo: Attribute.Component<'row.card-row'>;
     externalLinks: Attribute.Component<'row.card-row'>;
