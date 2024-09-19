@@ -1141,7 +1141,6 @@ export interface ApiCsrCsr extends Schema.CollectionType {
     breadcrumbs: Attribute.Component<'elements.link-list', true>;
     headerSection: Attribute.Component<'elements.card'>;
     csrCards: Attribute.Component<'csr.csr'>;
-    monentsCards: Attribute.Component<'elements.image-card', true>;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;

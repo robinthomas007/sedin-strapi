@@ -104,16 +104,6 @@ export interface ContactformContactForm extends Schema.Component {
   };
 }
 
-export interface CsrCards extends Schema.Component {
-  collectionName: 'components_csr_cards';
-  info: {
-    displayName: 'cards';
-  };
-  attributes: {
-    image: Attribute.Media;
-  };
-}
-
 export interface CsrCsr extends Schema.Component {
   collectionName: 'components_csr_csrs';
   info: {
@@ -126,19 +116,6 @@ export interface CsrCsr extends Schema.Component {
     title: Attribute.String;
     description: Attribute.String;
     cards: Attribute.Component<'elements.info-card', true>;
-    cardsTitle: Attribute.String;
-  };
-}
-
-export interface CsrMonentsCards extends Schema.Component {
-  collectionName: 'components_csr_monents_cards';
-  info: {
-    displayName: 'monentsCards';
-    description: '';
-  };
-  attributes: {
-    title: Attribute.String;
-    cards: Attribute.Component<'csr.cards'>;
   };
 }
 
@@ -533,9 +510,7 @@ declare module '@strapi/types' {
       'case-study.case-studies-card': CaseStudyCaseStudiesCard;
       'case-study.case-study-intro': CaseStudyCaseStudyIntro;
       'contactform.contact-form': ContactformContactForm;
-      'csr.cards': CsrCards;
       'csr.csr': CsrCsr;
-      'csr.monents-cards': CsrMonentsCards;
       'digital-service.digital-service-list': DigitalServiceDigitalServiceList;
       'digital-service.digital-service': DigitalServiceDigitalService;
       'elements.button-link': ElementsButtonLink;
