@@ -34,17 +34,17 @@
     },
     "definitions": {
       "type": "component",
-      "repeatable": true,
+      "repeatable": false,
       "component": "row.info-card-row"
     },
     "generalTerms": {
       "type": "component",
-      "repeatable": true,
+      "repeatable": false,
       "component": "row.info-card-row"
     },
     "serviceOverview": {
       "type": "component",
-      "repeatable": true,
+      "repeatable": false,
       "component": "row.info-card-row"
     },
     "registration": {
@@ -54,12 +54,12 @@
     },
     "eligibility": {
       "type": "component",
-      "repeatable": true,
+      "repeatable": false,
       "component": "row.info-card-row"
     },
     "content": {
       "type": "component",
-      "repeatable": true,
+      "repeatable": false,
       "component": "row.info-card-row"
     },
     "indemnity": {
@@ -69,12 +69,12 @@
     },
     "terms": {
       "type": "component",
-      "repeatable": true,
+      "repeatable": false,
       "component": "row.info-card-row"
     },
     "communication": {
       "type": "component",
-      "repeatable": true,
+      "repeatable": false,
       "component": "row.info-card-row"
     },
     "obligations": {
