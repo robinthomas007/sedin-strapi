@@ -1,0 +1,19 @@
+{
+  "collectionName": "components_csr_monents_cards",
+  "info": {
+    "displayName": "monentsCards",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "cards": {
+      "displayName": "cards",
+      "type": "component",
+      "repeatable": false,
+      "component": "csr.cards"
+    }
+  }
+}
