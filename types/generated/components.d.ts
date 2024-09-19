@@ -398,6 +398,19 @@ export interface KubLeadershipCards extends Schema.Component {
   };
 }
 
+export interface PrivacyDisclosureSection extends Schema.Component {
+  collectionName: 'components_privacy_disclosure_sections';
+  info: {
+    displayName: 'DisclosureSection';
+    description: '';
+  };
+  attributes: {
+    Disclosure: Attribute.Component<'row.card-row'>;
+    description2: Attribute.Text;
+    Disclosure2: Attribute.Component<'row.image-card-wrapper'>;
+  };
+}
+
 export interface PrivacyPrivPolicy extends Schema.Component {
   collectionName: 'components_privacy_priv_policies';
   info: {
@@ -518,6 +531,7 @@ declare module '@strapi/types' {
       'kub.eco-system': KubEcoSystem;
       'kub.kub-cards': KubKubCards;
       'kub.leadership-cards': KubLeadershipCards;
+      'privacy.disclosure-section': PrivacyDisclosureSection;
       'privacy.priv-policy': PrivacyPrivPolicy;
       'row.card-row': RowCardRow;
       'row.faq-row': RowFaqRow;

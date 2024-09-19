@@ -1,0 +1,23 @@
+{
+  "collectionName": "components_privacy_disclosure_sections",
+  "info": {
+    "displayName": "DisclosureSection",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "Disclosure": {
+      "type": "component",
+      "repeatable": false,
+      "component": "row.card-row"
+    },
+    "description2": {
+      "type": "text"
+    },
+    "Disclosure2": {
+      "type": "component",
+      "repeatable": false,
+      "component": "row.image-card-wrapper"
+    }
+  }
+}
