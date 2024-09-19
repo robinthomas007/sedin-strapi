@@ -27,17 +27,7 @@
       "repeatable": false,
       "component": "elements.card"
     },
-    "introSection": {
-      "type": "component",
-      "repeatable": false,
-      "component": "row.card-row"
-    },
     "definitions": {
-      "type": "component",
-      "repeatable": false,
-      "component": "row.card-row"
-    },
-    "thirdParties": {
       "type": "component",
       "repeatable": false,
       "component": "row.card-row"
@@ -102,6 +92,16 @@
       "type": "component",
       "repeatable": false,
       "component": "privacy.disclosure-section"
+    },
+    "thirdParties": {
+      "type": "component",
+      "repeatable": false,
+      "component": "row.info-card-row"
+    },
+    "introSection": {
+      "type": "component",
+      "repeatable": false,
+      "component": "row.info-card-row"
     }
   }
 }
