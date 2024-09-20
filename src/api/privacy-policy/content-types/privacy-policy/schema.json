@@ -50,7 +50,7 @@
     "ContactUs": {
       "type": "component",
       "repeatable": false,
-      "component": "row.card-row"
+      "component": "elements.info-card"
     },
     "PolicyInfo": {
       "displayName": "privPolicy",
@@ -99,6 +99,11 @@
       "component": "elements.info-card"
     },
     "externalLinks": {
+      "type": "component",
+      "repeatable": false,
+      "component": "elements.info-card"
+    },
+    "externalLinks2": {
       "type": "component",
       "repeatable": false,
       "component": "elements.info-card"
