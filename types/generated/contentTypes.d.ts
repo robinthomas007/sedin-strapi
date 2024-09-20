@@ -1141,6 +1141,7 @@ export interface ApiCsrCsr extends Schema.CollectionType {
     breadcrumbs: Attribute.Component<'elements.link-list', true>;
     headerSection: Attribute.Component<'elements.card'>;
     csrCards: Attribute.Component<'csr.csr'>;
+    monentsCards: Attribute.Component<'elements.image-card', true>;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
@@ -1997,9 +1998,9 @@ export interface ApiTermsAndConditionTermsAndCondition
     intellectual: Attribute.Component<'elements.info-card'>;
     force: Attribute.Component<'elements.info-card'>;
     no_warrenty: Attribute.Component<'elements.info-card'>;
-    dispute_resolution: Attribute.Component<'row.info-card-row', true>;
+    dispute_resolution: Attribute.Component<'row.info-card-row'>;
     grievances: Attribute.Component<'elements.info-card'>;
-    disclosure: Attribute.Component<'row.info-card-row', true>;
+    disclosure: Attribute.Component<'row.info-card-row'>;
     contact_us: Attribute.Component<'elements.info-card'>;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
