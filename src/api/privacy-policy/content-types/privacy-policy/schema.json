@@ -47,11 +47,6 @@
       "repeatable": false,
       "component": "row.card-row"
     },
-    "ContactUs": {
-      "type": "component",
-      "repeatable": false,
-      "component": "elements.info-card"
-    },
     "PolicyInfo": {
       "displayName": "privPolicy",
       "type": "component",
@@ -107,6 +102,11 @@
       "type": "component",
       "repeatable": false,
       "component": "elements.info-card"
+    },
+    "contactUs": {
+      "type": "component",
+      "repeatable": false,
+      "component": "row.info-card-row"
     }
   }
 }
