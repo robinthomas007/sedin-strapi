@@ -188,7 +188,7 @@ export interface ElementsCard extends Schema.Component {
     description: '';
   };
   attributes: {
-    title: Attribute.Text & Attribute.Required;
+    title: Attribute.Text;
     description: Attribute.Text;
     cardimg: Attribute.Media;
     cardbtn: Attribute.Component<'elements.button-link'>;
@@ -241,7 +241,7 @@ export interface ElementsInfoCard extends Schema.Component {
     description: '';
   };
   attributes: {
-    title: Attribute.String & Attribute.Required;
+    title: Attribute.String;
     description: Attribute.Text;
     image: Attribute.Media;
     background: Attribute.Media;
