@@ -37,11 +37,6 @@
       "repeatable": false,
       "component": "row.card-row"
     },
-    "externalLinks": {
-      "type": "component",
-      "repeatable": false,
-      "component": "row.card-row"
-    },
     "googleAnalytics": {
       "type": "component",
       "repeatable": false,
@@ -99,6 +94,11 @@
       "component": "elements.info-card"
     },
     "AutomatedDecision": {
+      "type": "component",
+      "repeatable": false,
+      "component": "elements.info-card"
+    },
+    "externalLinks": {
       "type": "component",
       "repeatable": false,
       "component": "elements.info-card"
