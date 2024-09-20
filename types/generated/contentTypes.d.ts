@@ -1994,7 +1994,7 @@ export interface ApiTermsAndConditionTermsAndCondition
     obligations: Attribute.Component<'row.card-row'>;
     beta: Attribute.Component<'elements.info-card'>;
     tech_imp: Attribute.Component<'elements.info-card'>;
-    intel_pro_right: Attribute.Component<'elements.info-card'>;
+    intellectual: Attribute.Component<'elements.info-card'>;
     force: Attribute.Component<'elements.info-card'>;
     no_warrenty: Attribute.Component<'elements.info-card'>;
     dispute_resolution: Attribute.Component<'row.info-card-row', true>;
