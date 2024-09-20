@@ -52,21 +52,6 @@
       "repeatable": false,
       "component": "row.card-row"
     },
-    "Severability": {
-      "type": "component",
-      "repeatable": false,
-      "component": "row.card-row"
-    },
-    "Amendment": {
-      "type": "component",
-      "repeatable": false,
-      "component": "row.card-row"
-    },
-    "AutomatedDecision": {
-      "type": "component",
-      "repeatable": false,
-      "component": "row.card-row"
-    },
     "ContactUs": {
       "type": "component",
       "repeatable": false,
@@ -102,6 +87,21 @@
       "type": "component",
       "repeatable": false,
       "component": "row.info-card-row"
+    },
+    "Severability": {
+      "type": "component",
+      "repeatable": false,
+      "component": "elements.info-card"
+    },
+    "Amendment": {
+      "type": "component",
+      "repeatable": false,
+      "component": "elements.info-card"
+    },
+    "AutomatedDecision": {
+      "type": "component",
+      "repeatable": false,
+      "component": "elements.info-card"
     }
   }
 }
