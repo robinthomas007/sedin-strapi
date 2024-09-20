@@ -1999,9 +1999,9 @@ export interface ApiTermsAndConditionTermsAndCondition
     force: Attribute.Component<'elements.info-card'>;
     no_warrenty: Attribute.Component<'elements.info-card'>;
     dispute_resolution: Attribute.Component<'row.info-card-row'>;
-    grievances: Attribute.Component<'elements.info-card'>;
-    disclosure: Attribute.Component<'row.info-card-row'>;
-    contact_us: Attribute.Component<'elements.info-card'>;
+    grievances: Attribute.Component<'elements.card'>;
+    disclosure: Attribute.Component<'row.card-row'>;
+    contact_us: Attribute.Component<'elements.card'>;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;

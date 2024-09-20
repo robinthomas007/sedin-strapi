@@ -115,17 +115,17 @@
     "grievances": {
       "type": "component",
       "repeatable": false,
-      "component": "elements.info-card"
+      "component": "elements.card"
     },
     "disclosure": {
       "type": "component",
       "repeatable": false,
-      "component": "row.info-card-row"
+      "component": "row.card-row"
     },
     "contact_us": {
       "type": "component",
       "repeatable": false,
-      "component": "elements.info-card"
+      "component": "elements.card"
     }
   }
 }
