@@ -37,11 +37,6 @@
       "repeatable": false,
       "component": "row.card-row"
     },
-    "HowInfo": {
-      "type": "component",
-      "repeatable": false,
-      "component": "row.card-row"
-    },
     "externalLinks": {
       "type": "component",
       "repeatable": false,
@@ -99,6 +94,11 @@
       "component": "row.info-card-row"
     },
     "introSection": {
+      "type": "component",
+      "repeatable": false,
+      "component": "row.info-card-row"
+    },
+    "HowInfo": {
       "type": "component",
       "repeatable": false,
       "component": "row.info-card-row"
